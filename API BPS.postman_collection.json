@@ -1,0 +1,2872 @@
+{
+	"info": {
+		"_postman_id": "377f7dad-3f50-411a-b7b6-e78ee2cfd464",
+		"name": "API BPS",
+		"description": "Berikut ini adalah API Collection Postman untuk mencoba Web API BPS ([https://webapi.bps.go.od](https://webapi.bps.go.od)). Silahkan ubah variabel sesuai kebutuhan anda.  \n  \n\\- **API_KEY** adalah **KEY** yang anda dapatkan dari website API BPS\n\n*   **DOMAIN_VALUE** adalah 4 digit Kode Kabupaten atau 2 digit Kode Provinsi diikuti 00.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8879481"
+	},
+	"item": [
+		{
+			"name": "list",
+			"item": [
+				{
+					"name": "subject",
+					"item": [
+						{
+							"name": "subject-categories",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/list/?model=subcat&domain={{DOMAIN_VALUE}}",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"list",
+										""
+									],
+									"query": [
+										{
+											"key": "model",
+											"value": "subcat",
+											"description": "WAJIB (nama model)"
+										},
+										{
+											"key": "lang",
+											"value": "ind",
+											"description": "opsional (ind, eng)",
+											"disabled": true
+										},
+										{
+											"key": "domain",
+											"value": "{{DOMAIN_VALUE}}",
+											"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+										},
+										{
+											"key": "page",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/list/?model=subcat&lang=ind&domain=7315&page",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"list",
+												""
+											],
+											"query": [
+												{
+													"key": "model",
+													"value": "subcat"
+												},
+												{
+													"key": "lang",
+													"value": "ind",
+													"description": "ind,eng (opsional)"
+												},
+												{
+													"key": "domain",
+													"value": "7315"
+												},
+												{
+													"key": "page",
+													"value": null,
+													"description": "opsional"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 22 Jun 2022 08:33:50 GMT"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60, max=59"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"OK\",\n    \"data-availability\": \"available\",\n    \"data\": [\n        {\n            \"page\": 0,\n            \"pages\": 1,\n            \"per_page\": 10,\n            \"count\": 4,\n            \"total\": 4\n        },\n        [\n            {\n                \"subcat_id\": 0,\n                \"title\": \"Lainnya\"\n            },\n            {\n                \"subcat_id\": 1,\n                \"title\": \"Sosial dan Kependudukan\"\n            },\n            {\n                \"subcat_id\": 2,\n                \"title\": \"Ekonomi dan Perdagangan\"\n            },\n            {\n                \"subcat_id\": 3,\n                \"title\": \"Pertanian dan Pertambangan\"\n            }\n        ]\n    ]\n}"
+								},
+								{
+									"name": "403",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/list/?model=subcat&lang=ind&domain=7315&page",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"list",
+												""
+											],
+											"query": [
+												{
+													"key": "model",
+													"value": "subcat"
+												},
+												{
+													"key": "lang",
+													"value": "ind",
+													"description": "ind,eng (opsional)"
+												},
+												{
+													"key": "domain",
+													"value": "7315"
+												},
+												{
+													"key": "page",
+													"value": null,
+													"description": "opsional"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 22 Jun 2022 08:41:58 GMT"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60, max=60"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "TS01ac9944=0167a1c8611d4b03c789b44a9d0ac8cf42789f3ded54a66e86ac02f0fb7f603772d2a9832e65d3094ff1f1eeeab889f3e363a0f412e84cca12dabc89538d24396c01f6ed83; Path=/; Secure; HTTPOnly"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"Error\",\n    \"message\": \"Parameter Key is Missing.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "subject",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/list/?model=subject&domain={{DOMAIN_VALUE}}&subcat=1",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"list",
+										""
+									],
+									"query": [
+										{
+											"key": "model",
+											"value": "subject",
+											"description": "WAJIB (nama model)"
+										},
+										{
+											"key": "lang",
+											"value": "ind",
+											"description": "opsional (ind, eng)",
+											"disabled": true
+										},
+										{
+											"key": "domain",
+											"value": "{{DOMAIN_VALUE}}",
+											"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+										},
+										{
+											"key": "subcat",
+											"value": "1",
+											"description": "WAJIB"
+										},
+										{
+											"key": "page",
+											"value": "",
+											"description": "opsional (halaman)",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/list/?model=subject&lang=ind&domain=7315&subcat=1&page",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"list",
+												""
+											],
+											"query": [
+												{
+													"key": "model",
+													"value": "subject"
+												},
+												{
+													"key": "lang",
+													"value": "ind",
+													"description": "ind,eng (opsional)"
+												},
+												{
+													"key": "domain",
+													"value": "7315"
+												},
+												{
+													"key": "subcat",
+													"value": "1",
+													"description": "opsional"
+												},
+												{
+													"key": "page",
+													"value": null,
+													"description": "opsional"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 22 Jun 2022 08:35:02 GMT"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60, max=55"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"OK\",\n    \"data-availability\": \"available\",\n    \"data\": [\n        {\n            \"page\": 0,\n            \"pages\": 1,\n            \"per_page\": 10,\n            \"count\": 9,\n            \"total\": 9\n        },\n        [\n            {\n                \"sub_id\": 153,\n                \"title\": \"Geografi\",\n                \"subcat_id\": 1,\n                \"subcat\": \"Sosial dan Kependudukan\",\n                \"ntabel\": null\n            },\n            {\n                \"sub_id\": 151,\n                \"title\": \"Iklim\",\n                \"subcat_id\": 1,\n                \"subcat\": \"Sosial dan Kependudukan\",\n                \"ntabel\": null\n            },\n            {\n                \"sub_id\": 26,\n                \"title\": \"Indeks Pembangunan Manusia\",\n                \"subcat_id\": 1,\n                \"subcat\": \"Sosial dan Kependudukan\",\n                \"ntabel\": null\n            },\n            {\n                \"sub_id\": 23,\n                \"title\": \"Kemiskinan\",\n                \"subcat_id\": 1,\n                \"subcat\": \"Sosial dan Kependudukan\",\n                \"ntabel\": null\n            },\n            {\n                \"sub_id\": 12,\n                \"title\": \"Kependudukan\",\n                \"subcat_id\": 1,\n                \"subcat\": \"Sosial dan Kependudukan\",\n                \"ntabel\": null\n            },\n            {\n                \"sub_id\": 30,\n                \"title\": \"Kesehatan\",\n                \"subcat_id\": 1,\n                \"subcat\": \"Sosial dan Kependudukan\",\n                \"ntabel\": null\n            },\n            {\n                \"sub_id\": 101,\n                \"title\": \"Pemerintahan\",\n                \"subcat_id\": 1,\n                \"subcat\": \"Sosial dan Kependudukan\",\n                \"ntabel\": null\n            },\n            {\n                \"sub_id\": 28,\n                \"title\": \"Pendidikan\",\n                \"subcat_id\": 1,\n                \"subcat\": \"Sosial dan Kependudukan\",\n                \"ntabel\": null\n            },\n            {\n                \"sub_id\": 6,\n                \"title\": \"Tenaga Kerja\",\n                \"subcat_id\": 1,\n                \"subcat\": \"Sosial dan Kependudukan\",\n                \"ntabel\": null\n            }\n        ]\n    ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "dynamic-data",
+					"item": [
+						{
+							"name": "data",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/list/?model=data&lang=ind&domain={{DOMAIN_VALUE}}&var=1&turvar=5&vervar=48&th=121&turth=0",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"list",
+										""
+									],
+									"query": [
+										{
+											"key": "model",
+											"value": "data",
+											"description": "WAJIB (nama model)"
+										},
+										{
+											"key": "lang",
+											"value": "ind",
+											"description": "ind,eng (opsional)"
+										},
+										{
+											"key": "domain",
+											"value": "{{DOMAIN_VALUE}}",
+											"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+										},
+										{
+											"key": "var",
+											"value": "1",
+											"description": "WAJIB (Kode ID Variabel)"
+										},
+										{
+											"key": "turvar",
+											"value": "5",
+											"description": "WAJIB (Kode ID Variabel Turunan)"
+										},
+										{
+											"key": "vervar",
+											"value": "48",
+											"description": "WAJIB (Kode ID Variabel Vertikal)"
+										},
+										{
+											"key": "th",
+											"value": "121",
+											"description": "WAJIB (Kode ID Periode)"
+										},
+										{
+											"key": "turth",
+											"value": "0",
+											"description": "WAJIB (Kode ID Periode Turunan)"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "derived-period-data",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/list?model=turth&domain={{DOMAIN_VALUE}}",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"list"
+									],
+									"query": [
+										{
+											"key": "model",
+											"value": "turth",
+											"description": "WAJIB (Kode Model)"
+										},
+										{
+											"key": "lang",
+											"value": "ind",
+											"description": "opsional (ind, eng)",
+											"disabled": true
+										},
+										{
+											"key": "domain",
+											"value": "{{DOMAIN_VALUE}}",
+											"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+										},
+										{
+											"key": "var",
+											"value": "91",
+											"description": "opsional (Kode ID Variabel)",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "",
+											"description": "opsional (halaman)",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/list?model=turth&domain={{DOMAIN_VALUE}}",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"list"
+											],
+											"query": [
+												{
+													"key": "model",
+													"value": "turth",
+													"description": "WAJIB (Kode Model)"
+												},
+												{
+													"key": "lang",
+													"value": "ind",
+													"description": "opsional (ind, eng)",
+													"disabled": true
+												},
+												{
+													"key": "domain",
+													"value": "{{DOMAIN_VALUE}}",
+													"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+												},
+												{
+													"key": "var",
+													"value": "91",
+													"description": "opsional (Kode ID Variabel)",
+													"disabled": true
+												},
+												{
+													"key": "page",
+													"value": "",
+													"description": "opsional (halaman)",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 22 Jun 2022 09:50:20 GMT"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60, max=56"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"OK\",\n    \"data-availability\": \"available\",\n    \"data\": [\n        {\n            \"page\": 1,\n            \"pages\": 3,\n            \"per_page\": 10,\n            \"count\": 10,\n            \"total\": 22\n        },\n        [\n            {\n                \"turth_id\": 0,\n                \"turth\": \"Tahun\",\n                \"group_turth_id\": 0,\n                \"name_group_turth\": \"Tahunan\"\n            },\n            {\n                \"turth_id\": 1,\n                \"turth\": \"Januari\",\n                \"group_turth_id\": 1,\n                \"name_group_turth\": \"Bulanan\"\n            },\n            {\n                \"turth_id\": 2,\n                \"turth\": \"Februari\",\n                \"group_turth_id\": 1,\n                \"name_group_turth\": \"Bulanan\"\n            },\n            {\n                \"turth_id\": 3,\n                \"turth\": \"Maret\",\n                \"group_turth_id\": 1,\n                \"name_group_turth\": \"Bulanan\"\n            },\n            {\n                \"turth_id\": 4,\n                \"turth\": \"April\",\n                \"group_turth_id\": 1,\n                \"name_group_turth\": \"Bulanan\"\n            },\n            {\n                \"turth_id\": 5,\n                \"turth\": \"Mei\",\n                \"group_turth_id\": 1,\n                \"name_group_turth\": \"Bulanan\"\n            },\n            {\n                \"turth_id\": 6,\n                \"turth\": \"Juni\",\n                \"group_turth_id\": 1,\n                \"name_group_turth\": \"Bulanan\"\n            },\n            {\n                \"turth_id\": 7,\n                \"turth\": \"Juli\",\n                \"group_turth_id\": 1,\n                \"name_group_turth\": \"Bulanan\"\n            },\n            {\n                \"turth_id\": 8,\n                \"turth\": \"Agustus\",\n                \"group_turth_id\": 1,\n                \"name_group_turth\": \"Bulanan\"\n            },\n            {\n                \"turth_id\": 9,\n                \"turth\": \"September\",\n                \"group_turth_id\": 1,\n                \"name_group_turth\": \"Bulanan\"\n            }\n        ]\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "derived-variable",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/list?model=turvar&domain={{DOMAIN_VALUE}}",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"list"
+									],
+									"query": [
+										{
+											"key": "model",
+											"value": "turvar",
+											"description": "WAJIB (Kode Model)"
+										},
+										{
+											"key": "lang",
+											"value": "ind",
+											"description": "opsional (ind, eng)",
+											"disabled": true
+										},
+										{
+											"key": "domain",
+											"value": "{{DOMAIN_VALUE}}",
+											"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+										},
+										{
+											"key": "var",
+											"value": "91",
+											"description": "opsional (Kode ID Variabel)",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "",
+											"description": "opsional (halaman)",
+											"disabled": true
+										},
+										{
+											"key": "group",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "nopage",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/list?model=turvar&domain={{DOMAIN_VALUE}}",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"list"
+											],
+											"query": [
+												{
+													"key": "model",
+													"value": "turvar",
+													"description": "WAJIB (Kode Model)"
+												},
+												{
+													"key": "lang",
+													"value": "ind",
+													"description": "opsional (ind, eng)",
+													"disabled": true
+												},
+												{
+													"key": "domain",
+													"value": "{{DOMAIN_VALUE}}",
+													"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+												},
+												{
+													"key": "var",
+													"value": "91",
+													"description": "opsional (Kode ID Variabel)",
+													"disabled": true
+												},
+												{
+													"key": "page",
+													"value": "",
+													"description": "opsional (halaman)",
+													"disabled": true
+												},
+												{
+													"key": "group",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "nopage",
+													"value": "",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 22 Jun 2022 09:50:32 GMT"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60, max=55"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"OK\",\n    \"data-availability\": \"available\",\n    \"data\": [\n        {\n            \"page\": 1,\n            \"pages\": 8,\n            \"per_page\": 10,\n            \"count\": 10,\n            \"total\": 75\n        },\n        [\n            {\n                \"turvar_id\": 3,\n                \"turvar\": \"Laju Pertumbuhan Kumulatif\",\n                \"group_turvar_id\": 2,\n                \"name_group_turvar\": \"Laju Pertumbuhan PDB Lapangan Usaha\"\n            },\n            {\n                \"turvar_id\": 4,\n                \"turvar\": \"Laju Pertumbuhan Q to Q\",\n                \"group_turvar_id\": 2,\n                \"name_group_turvar\": \"Laju Pertumbuhan PDB Lapangan Usaha\"\n            },\n            {\n                \"turvar_id\": 5,\n                \"turvar\": \"Laju Pertumbuhan Y on Y\",\n                \"group_turvar_id\": 2,\n                \"name_group_turvar\": \"Laju Pertumbuhan PDB Lapangan Usaha\"\n            },\n            {\n                \"turvar_id\": 27,\n                \"turvar\": \"Padi\",\n                \"group_turvar_id\": 3,\n                \"name_group_turvar\": \"Tanaman Pangan\"\n            },\n            {\n                \"turvar_id\": 28,\n                \"turvar\": \"Jagung\",\n                \"group_turvar_id\": 3,\n                \"name_group_turvar\": \"Tanaman Pangan\"\n            },\n            {\n                \"turvar_id\": 29,\n                \"turvar\": \"Ketela Pohon\",\n                \"group_turvar_id\": 3,\n                \"name_group_turvar\": \"Tanaman Pangan\"\n            },\n            {\n                \"turvar_id\": 58,\n                \"turvar\": \"Ketela Rambat\",\n                \"group_turvar_id\": 3,\n                \"name_group_turvar\": \"Tanaman Pangan\"\n            },\n            {\n                \"turvar_id\": 59,\n                \"turvar\": \"Kacang Kedelai\",\n                \"group_turvar_id\": 3,\n                \"name_group_turvar\": \"Tanaman Pangan\"\n            },\n            {\n                \"turvar_id\": 60,\n                \"turvar\": \"Kacang Hijau\",\n                \"group_turvar_id\": 3,\n                \"name_group_turvar\": \"Tanaman Pangan\"\n            },\n            {\n                \"turvar_id\": 61,\n                \"turvar\": \"Kacang Tanah\",\n                \"group_turvar_id\": 3,\n                \"name_group_turvar\": \"Tanaman Pangan\"\n            }\n        ]\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "period-data",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/list?model=th&domain={{DOMAIN_VALUE}}&var=91",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"list"
+									],
+									"query": [
+										{
+											"key": "model",
+											"value": "th",
+											"description": "WAJIB (Kode Model)"
+										},
+										{
+											"key": "lang",
+											"value": "ind",
+											"description": "opsional (ind, eng)",
+											"disabled": true
+										},
+										{
+											"key": "domain",
+											"value": "{{DOMAIN_VALUE}}",
+											"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+										},
+										{
+											"key": "var",
+											"value": "91",
+											"description": "WAJIB (Kode ID Variabel)"
+										},
+										{
+											"key": "page",
+											"value": "",
+											"description": "opsional (halaman)",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "period-data",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/list?model=th&domain=7315&var=91",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"list"
+											],
+											"query": [
+												{
+													"key": "model",
+													"value": "th",
+													"description": "WAJIB (Kode Model)"
+												},
+												{
+													"key": "lang",
+													"value": "ind",
+													"description": "opsional (ind, eng)",
+													"disabled": true
+												},
+												{
+													"key": "domain",
+													"value": "7315",
+													"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+												},
+												{
+													"key": "var",
+													"value": "91",
+													"description": "WAJIB (Kode ID Variabel)"
+												},
+												{
+													"key": "page",
+													"value": null,
+													"description": "opsional (halaman)",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 22 Jun 2022 09:23:54 GMT"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60, max=54"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"OK\",\n    \"data-availability\": \"available\",\n    \"data\": [\n        {\n            \"page\": 1,\n            \"pages\": 2,\n            \"per_page\": 10,\n            \"count\": 10,\n            \"total\": 12\n        },\n        [\n            {\n                \"th_id\": 121,\n                \"th\": \"2021\"\n            },\n            {\n                \"th_id\": 120,\n                \"th\": \"2020\"\n            },\n            {\n                \"th_id\": 119,\n                \"th\": \"2019\"\n            },\n            {\n                \"th_id\": 118,\n                \"th\": \"2018\"\n            },\n            {\n                \"th_id\": 117,\n                \"th\": \"2017\"\n            },\n            {\n                \"th_id\": 116,\n                \"th\": \"2016\"\n            },\n            {\n                \"th_id\": 115,\n                \"th\": \"2015\"\n            },\n            {\n                \"th_id\": 114,\n                \"th\": \"2014\"\n            },\n            {\n                \"th_id\": 113,\n                \"th\": \"2013\"\n            },\n            {\n                \"th_id\": 112,\n                \"th\": \"2012\"\n            }\n        ]\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "unit-data",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/list/?model=unit&domain={{DOMAIN_VALUE}}&var=91",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"list",
+										""
+									],
+									"query": [
+										{
+											"key": "model",
+											"value": "unit",
+											"description": "WAJIB (nama model)"
+										},
+										{
+											"key": "lang",
+											"value": "ind",
+											"description": "opsional (ind, eng)",
+											"disabled": true
+										},
+										{
+											"key": "domain",
+											"value": "{{DOMAIN_VALUE}}",
+											"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+										},
+										{
+											"key": "var",
+											"value": "91",
+											"description": "WAJIB (Kode ID Variabel)"
+										},
+										{
+											"key": "page",
+											"value": "",
+											"description": "opsional (halaman)",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/list/?model=unit&domain={{DOMAIN_VALUE}}&var=91",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"list",
+												""
+											],
+											"query": [
+												{
+													"key": "model",
+													"value": "unit",
+													"description": "WAJIB (nama model)"
+												},
+												{
+													"key": "lang",
+													"value": "ind",
+													"description": "opsional (ind, eng)",
+													"disabled": true
+												},
+												{
+													"key": "domain",
+													"value": "{{DOMAIN_VALUE}}",
+													"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+												},
+												{
+													"key": "var",
+													"value": "91",
+													"description": "WAJIB (Kode ID Variabel)"
+												},
+												{
+													"key": "page",
+													"value": "",
+													"description": "opsional (halaman)",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 22 Jun 2022 09:50:08 GMT"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60, max=57"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"OK\",\n    \"data-availability\": \"available\",\n    \"data\": [\n        {\n            \"page\": 1,\n            \"pages\": 3,\n            \"per_page\": 10,\n            \"count\": 10,\n            \"total\": 29\n        },\n        [\n            {\n                \"unit_id\": 0,\n                \"unit\": \"Tidak Ada Satuan\"\n            },\n            {\n                \"unit_id\": 1,\n                \"unit\": \"Jiwa\"\n            },\n            {\n                \"unit_id\": 2,\n                \"unit\": \"Tahun\"\n            },\n            {\n                \"unit_id\": 3,\n                \"unit\": \"Rupiah\"\n            },\n            {\n                \"unit_id\": 4,\n                \"unit\": \"Ribu Rupiah\"\n            },\n            {\n                \"unit_id\": 5,\n                \"unit\": \"Juta Rupiah\"\n            },\n            {\n                \"unit_id\": 6,\n                \"unit\": \"Milyar Rupiah\"\n            },\n            {\n                \"unit_id\": 7,\n                \"unit\": \"Persen\"\n            },\n            {\n                \"unit_id\": 8,\n                \"unit\": \"Hektar\"\n            },\n            {\n                \"unit_id\": 9,\n                \"unit\": \"Kuintal/Hektar\"\n            }\n        ]\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "vertical-variable",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/list/?model=vervar&domain={{DOMAIN_VALUE}}&var=91",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"list",
+										""
+									],
+									"query": [
+										{
+											"key": "model",
+											"value": "vervar"
+										},
+										{
+											"key": "lang",
+											"value": "ind",
+											"description": "opsional (ind, eng)",
+											"disabled": true
+										},
+										{
+											"key": "domain",
+											"value": "{{DOMAIN_VALUE}}",
+											"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+										},
+										{
+											"key": "var",
+											"value": "91",
+											"description": "WAJIB (Kode ID Variabel)"
+										},
+										{
+											"key": "page",
+											"value": "",
+											"description": "opsional (halaman)",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/list/?model=vervar&domain={{DOMAIN_VALUE}}&var=91",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"list",
+												""
+											],
+											"query": [
+												{
+													"key": "model",
+													"value": "vervar"
+												},
+												{
+													"key": "lang",
+													"value": "ind",
+													"description": "opsional (ind, eng)",
+													"disabled": true
+												},
+												{
+													"key": "domain",
+													"value": "{{DOMAIN_VALUE}}",
+													"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+												},
+												{
+													"key": "var",
+													"value": "91",
+													"description": "WAJIB (Kode ID Variabel)"
+												},
+												{
+													"key": "page",
+													"value": "",
+													"description": "opsional (halaman)",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 22 Jun 2022 09:50:51 GMT"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60, max=54"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"OK\",\n    \"data-availability\": \"available\",\n    \"data\": [\n        {\n            \"page\": 1,\n            \"pages\": 1,\n            \"per_page\": 10,\n            \"count\": 1,\n            \"total\": 1\n        },\n        [\n            {\n                \"kode_ver_id\": 7315,\n                \"vervar\": \"Kabupaten Pinrang\",\n                \"item_ver_id\": 428,\n                \"group_ver_id\": 6,\n                \"name_group_ver_id\": \"Kabupaten Pinrang\"\n            }\n        ]\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "variable",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{BASE_URL}}/list?model=var&domain={{DOMAIN_VALUE}}&subject=26",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"list"
+									],
+									"query": [
+										{
+											"key": "model",
+											"value": "var"
+										},
+										{
+											"key": "lang",
+											"value": "ind",
+											"description": "opsional (ind,eng)",
+											"disabled": true
+										},
+										{
+											"key": "domain",
+											"value": "{{DOMAIN_VALUE}}",
+											"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+										},
+										{
+											"key": "subject",
+											"value": "26",
+											"description": "WAJIB (Kode ID Variabel)"
+										},
+										{
+											"key": "page",
+											"value": "",
+											"description": "opsional (halaman)",
+											"disabled": true
+										},
+										{
+											"key": "year",
+											"value": "",
+											"description": "opsional (tahun)",
+											"disabled": true
+										},
+										{
+											"key": "area",
+											"value": "",
+											"description": "opsional (0,1)",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text",
+												"disabled": true
+											}
+										],
+										"url": {
+											"raw": "{{BASE_URL}}/list?model=var&domain={{DOMAIN_VALUE}}&subject=26",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"list"
+											],
+											"query": [
+												{
+													"key": "model",
+													"value": "var"
+												},
+												{
+													"key": "lang",
+													"value": "ind",
+													"description": "opsional (ind,eng)",
+													"disabled": true
+												},
+												{
+													"key": "domain",
+													"value": "{{DOMAIN_VALUE}}",
+													"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+												},
+												{
+													"key": "subject",
+													"value": "26",
+													"description": "WAJIB (Kode ID Variabel)"
+												},
+												{
+													"key": "page",
+													"value": "",
+													"description": "opsional (halaman)",
+													"disabled": true
+												},
+												{
+													"key": "year",
+													"value": "",
+													"description": "opsional (tahun)",
+													"disabled": true
+												},
+												{
+													"key": "area",
+													"value": "",
+													"description": "opsional (0,1)",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 22 Jun 2022 09:51:02 GMT"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60, max=53"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"OK\",\n    \"data-availability\": \"available\",\n    \"data\": [\n        {\n            \"page\": 1,\n            \"pages\": 2,\n            \"per_page\": 10,\n            \"count\": 10,\n            \"total\": 11\n        },\n        [\n            {\n                \"var_id\": 91,\n                \"title\": \"Angka Harapan Hidup\",\n                \"sub_id\": 26,\n                \"sub_name\": \"Indeks Pembangunan Manusia\",\n                \"def\": \"\",\n                \"notes\": \"\",\n                \"vertical\": 6,\n                \"unit\": \"Persen\",\n                \"graph_id\": 1,\n                \"graph_name\": \"bar\"\n            },\n            {\n                \"var_id\": 92,\n                \"title\": \"Indeks Kesehatan\",\n                \"sub_id\": 26,\n                \"sub_name\": \"Indeks Pembangunan Manusia\",\n                \"def\": \"\",\n                \"notes\": \"\",\n                \"vertical\": 6,\n                \"unit\": \"Persen\",\n                \"graph_id\": 1,\n                \"graph_name\": \"bar\"\n            },\n            {\n                \"var_id\": 93,\n                \"title\": \"Harapan Lama Sekolah\",\n                \"sub_id\": 26,\n                \"sub_name\": \"Indeks Pembangunan Manusia\",\n                \"def\": \"\",\n                \"notes\": \"\",\n                \"vertical\": 6,\n                \"unit\": \"Persen\",\n                \"graph_id\": 1,\n                \"graph_name\": \"bar\"\n            },\n            {\n                \"var_id\": 94,\n                \"title\": \"Rata-Rata Lama Sekolah\",\n                \"sub_id\": 26,\n                \"sub_name\": \"Indeks Pembangunan Manusia\",\n                \"def\": \"\",\n                \"notes\": \"\",\n                \"vertical\": 6,\n                \"unit\": \"Persen\",\n                \"graph_id\": 1,\n                \"graph_name\": \"bar\"\n            },\n            {\n                \"var_id\": 95,\n                \"title\": \"Indeks Harapan Lama Sekolah\",\n                \"sub_id\": 26,\n                \"sub_name\": \"Indeks Pembangunan Manusia\",\n                \"def\": \"\",\n                \"notes\": \"\",\n                \"vertical\": 6,\n                \"unit\": \"Persen\",\n                \"graph_id\": 1,\n                \"graph_name\": \"bar\"\n            },\n            {\n                \"var_id\": 96,\n                \"title\": \"Indeks Rata-Rata Lama Sekolah\",\n                \"sub_id\": 26,\n                \"sub_name\": \"Indeks Pembangunan Manusia\",\n                \"def\": \"\",\n                \"notes\": \"\",\n                \"vertical\": 6,\n                \"unit\": \"Persen\",\n                \"graph_id\": 1,\n                \"graph_name\": \"bar\"\n            },\n            {\n                \"var_id\": 97,\n                \"title\": \"Indeks Pendidikan\",\n                \"sub_id\": 26,\n                \"sub_name\": \"Indeks Pembangunan Manusia\",\n                \"def\": \"\",\n                \"notes\": \"\",\n                \"vertical\": 6,\n                \"unit\": \"Persen\",\n                \"graph_id\": 1,\n                \"graph_name\": \"bar\"\n            },\n            {\n                \"var_id\": 98,\n                \"title\": \"Paritas Daya Beli\",\n                \"sub_id\": 26,\n                \"sub_name\": \"Indeks Pembangunan Manusia\",\n                \"def\": \"\",\n                \"notes\": \"\",\n                \"vertical\": 6,\n                \"unit\": \"Ribu Rupiah\",\n                \"graph_id\": 1,\n                \"graph_name\": \"bar\"\n            },\n            {\n                \"var_id\": 99,\n                \"title\": \"Indeks Daya Beli\",\n                \"sub_id\": 26,\n                \"sub_name\": \"Indeks Pembangunan Manusia\",\n                \"def\": \"\",\n                \"notes\": \"\",\n                \"vertical\": 6,\n                \"unit\": \"Persen\",\n                \"graph_id\": 1,\n                \"graph_name\": \"bar\"\n            },\n            {\n                \"var_id\": 100,\n                \"title\": \"Indeks Pembangunan Manusia\",\n                \"sub_id\": 26,\n                \"sub_name\": \"Indeks Pembangunan Manusia\",\n                \"def\": \"\",\n                \"notes\": \"\",\n                \"vertical\": 6,\n                \"unit\": \"Persen\",\n                \"graph_id\": 1,\n                \"graph_name\": \"bar\"\n            }\n        ]\n    ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "news",
+					"item": [
+						{
+							"name": "news-category",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/list?model=newscategory&domain={{DOMAIN_VALUE}}",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"list"
+									],
+									"query": [
+										{
+											"key": "model",
+											"value": "newscategory",
+											"description": "WAJIB (Kode Model)"
+										},
+										{
+											"key": "domain",
+											"value": "{{DOMAIN_VALUE}}",
+											"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+										},
+										{
+											"key": "lang",
+											"value": "",
+											"description": "opsional (ind, eng)",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/list?model=newscategory&domain={{DOMAIN_VALUE}}",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"list"
+											],
+											"query": [
+												{
+													"key": "model",
+													"value": "newscategory",
+													"description": "WAJIB (Kode Model)"
+												},
+												{
+													"key": "domain",
+													"value": "{{DOMAIN_VALUE}}",
+													"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+												},
+												{
+													"key": "lang",
+													"value": "",
+													"description": "opsional (ind, eng)",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 22 Jun 2022 09:49:50 GMT"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60, max=60"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"OK\",\n    \"data-availability\": \"available\",\n    \"data\": [\n        {\n            \"total\": 2\n        },\n        [\n            {\n                \"newscat_id\": \"Sensus dan Survey\",\n                \"newscat_name\": \"KEGIATAN STATISTIK\"\n            },\n            {\n                \"newscat_id\": \"Statistik Lain\",\n                \"newscat_name\": \"KEGIATAN STATISTIK LAINNYA\"\n            }\n        ]\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "news",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/list?model=news&domain={{DOMAIN_VALUE}}",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"list"
+									],
+									"query": [
+										{
+											"key": "model",
+											"value": "news",
+											"description": "WAJIB (Kode Model)"
+										},
+										{
+											"key": "domain",
+											"value": "{{DOMAIN_VALUE}}",
+											"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+										},
+										{
+											"key": "lang",
+											"value": "",
+											"description": "opsional (ind, eng)",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "",
+											"description": "opsional (Halaman)",
+											"disabled": true
+										},
+										{
+											"key": "newscat",
+											"value": "",
+											"description": "opsional (Kode ID Kategori Berita)",
+											"disabled": true
+										},
+										{
+											"key": "month",
+											"value": "02",
+											"description": "opsional (dua digit kode bulan)",
+											"disabled": true
+										},
+										{
+											"key": "year",
+											"value": "2022",
+											"description": "opsional (empat digit tahun)",
+											"disabled": true
+										},
+										{
+											"key": "keyword",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/list?model=news&domain={{DOMAIN_VALUE}}",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"list"
+											],
+											"query": [
+												{
+													"key": "model",
+													"value": "news",
+													"description": "WAJIB (Kode Model)"
+												},
+												{
+													"key": "domain",
+													"value": "{{DOMAIN_VALUE}}",
+													"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+												},
+												{
+													"key": "lang",
+													"value": "",
+													"description": "opsional (ind, eng)",
+													"disabled": true
+												},
+												{
+													"key": "page",
+													"value": "",
+													"description": "opsional (Halaman)",
+													"disabled": true
+												},
+												{
+													"key": "newscat",
+													"value": "",
+													"description": "opsional (Kode ID Kategori Berita)",
+													"disabled": true
+												},
+												{
+													"key": "month",
+													"value": "02",
+													"description": "opsional (dua digit kode bulan)",
+													"disabled": true
+												},
+												{
+													"key": "year",
+													"value": "2022",
+													"description": "opsional (empat digit tahun)",
+													"disabled": true
+												},
+												{
+													"key": "keyword",
+													"value": null,
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 22 Jun 2022 09:48:08 GMT"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60, max=54"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"OK\",\n    \"data-availability\": \"available\",\n    \"data\": [\n        {\n            \"page\": 1,\n            \"pages\": 5,\n            \"per_page\": 10,\n            \"count\": 10,\n            \"total\": 48\n        },\n        [\n            {\n                \"news_id\": 50,\n                \"newscat_id\": \"Statistik Lain\",\n                \"newscat_name\": \"KEGIATAN STATISTIK LAINNYA\",\n                \"title\": \"Analisis Indikator Sosial Ekonomi Kabupaten Pinrang pada Musrenbang Kabupaten Pinrang 2022\",\n                \"news\": \"Watang Sawitto -- Dalam rangka evaluasi dan perencanaan pembangunan, Pemerintah Kabupaten Pinrang dalam hal ini Bappelitbangda Kabupaten Pinrang pada hari ini (24/3) melaksanakan Musyawarah Perencanaan Pembangunan (Musrenbang) Rencana Kerja Pemerintah Daerah (RKPD) Kabupaten Pinrang tahun 2023. Kegiatan ini bertempat di Ruang Pola Kantor Bupati Pinrang. Kegiatan tahunan ini dihadiri oleh asisten 1 .....\",\n                \"rl_date\": \"2022-03-24\"\n            },\n            {\n                \"news_id\": 49,\n                \"newscat_id\": \"Statistik Lain\",\n                \"newscat_name\": \"KEGIATAN STATISTIK LAINNYA\",\n                \"title\": \"Kunjungan Kerja Kepala BPS Provinsi Sulawesi Selatan ke BPS Kabupaten Pinrang\",\n                \"news\": \"Watang Sawitto --&nbsp;Kamis (17/3), Kepala BPS Provinsi Sulawesi Selatan, Suntono, berkunjung ke BPS Kabupaten Pinrang. Disambut oleh H. Hadi, mewakili pimpinan BPS Kabupaten Pinrang, Suntono tiba di Pinrang setelah melakukan kunjungan kerja dari BPS Kabupaten Enrekang. Bertempat di Lantai 2 BPS Kabupaten Pinrang, Suntono menyampaikan banyak hal mengenai reformasi perubahan BPS seluruh Indonesia. .....\",\n                \"rl_date\": \"2022-03-17\"\n            },\n            {\n                \"news_id\": 48,\n                \"newscat_id\": \"Sensus dan Survey\",\n                \"newscat_name\": \"KEGIATAN STATISTIK\",\n                \"title\": \"Pelatihan Petugas Pemutakhiran Kerangka Geospasial dan Muatan Wilkerstat ST2023\",\n                \"news\": \"Dalam rangka persiapan kegiatan Sensus Pertanian 2023 (ST2023), BPS adakan kegiatan pemutakhiran kerangka induk sebagai dasar perencanaan dan pelaksanaan ST2023. Kegiatan ini diawali dengan pelatihan petugas terlebih dahulu sebelum kegiatan lapangan. Begitu pula di BPS Kabupaten Pinrang. Pelatihan petugas kegiatan ini di Kabupaten Pinrang terbagi menjadi 2 gelombang. Gelombang 1 dilaksanakan pada 2.....\",\n                \"rl_date\": \"2022-02-25\"\n            },\n            {\n                \"news_id\": 47,\n                \"newscat_id\": \"Statistik Lain\",\n                \"newscat_name\": \"KEGIATAN STATISTIK LAINNYA\",\n                \"title\": \"Koordinator Statistik Kecamatan (KSK) Terbaik BPS Kabupaten Pinrang Tahun 2021\",\n                \"news\": \"Halo&nbsp;<a class=\\\" xil3i\\\" href=\\\"https://www.instagram.com/explore/tags/sobatdata/\\\" tabindex=\\\"0\\\" style=\\\"margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; vertical-align: basel.....\",\n                \"rl_date\": \"2022-01-29\"\n            },\n            {\n                \"news_id\": 46,\n                \"newscat_id\": \"Sensus dan Survey\",\n                \"newscat_name\": \"KEGIATAN STATISTIK\",\n                \"title\": \"Pelatihan Petugas Survei Angkatan Kerja Nasional (Sakernas) Februari 2022\",\n                \"news\": \"Watang Sawitto -- Bertempat di hotel M, BPS Kabupaten Pinrang adakan pelatihan petugas Survei Angkatan Kerja Nasional (Sakernas) bulan Februari 2022. Pelatihan petugas ini dilaksanakan selama 2 (dua) hari yaitu 25-26 Januari 2022. Pelatihan yang diikuti oleh 7 (tujuh) orang petugas Sakernas Februari dipandu oleh Koordinator Fungsi Statistik Sosial BPS Kabupaten Pinrang, Ugiana Ramdhani SST, M.SE.<b.....\",\n                \"rl_date\": \"2022-01-26\"\n            },\n            {\n                \"news_id\": 45,\n                \"newscat_id\": \"Sensus dan Survey\",\n                \"newscat_name\": \"KEGIATAN STATISTIK\",\n                \"title\": \"Briefing Petugas KSA Padi & KSA Jagung Kabupaten Pinrang Tahun 2022\",\n                \"news\": \"Watang Sawitto -- Untuk menghasilkan angka produksi padi, jagung, atau komoditas tanaman pangan lainnya di suatu wilayah dibutuhkan 2 variabel, yaitu produktivitas dan juga luas panen.<br style=\\\"color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);\\\"><br style=\\\"color: .....\",\n                \"rl_date\": \"2022-01-24\"\n            },\n            {\n                \"news_id\": 39,\n                \"newscat_id\": \"Statistik Lain\",\n                \"newscat_name\": \"KEGIATAN STATISTIK LAINNYA\",\n                \"title\": \"Focus Group Discussion (FGD) Penyusunan Publikasi Pinrang dalam Angka Tahun 2022\",\n                \"news\": \"Watang Sawitto --&nbsp;Sesuai dengan Peraturan Presiden nomor 39 Tahun 2019 tentang Satu Data Indonesia, BPS memiliki peran dan eksistensi penting sebab memegang peran sentral dalam penyediaan data statistik nasional. Data yang dipublikasikan oleh BPS banyak digunakan sebagai referensi atau rujukan untuk membuat kebijakan, perencanaan dan penelitian.&nbsp;<br>Untuk menyediakan data berkualitas ters.....\",\n                \"rl_date\": \"2022-01-13\"\n            },\n            {\n                \"news_id\": 44,\n                \"newscat_id\": \"Statistik Lain\",\n                \"newscat_name\": \"KEGIATAN STATISTIK LAINNYA\",\n                \"title\": \"BPS Pinrang Ikuti Penganugerahan Zona Integritas menuju WBK tahun 2021\",\n                \"news\": \"Watang Sawitto -- Kementerian Pendayagunaan Aparatur Negara dan Reformasi Birokrasi (Kementerian PANRB) @kemenpanrb memberikan Apresiasi dan Penganugerahaan Zona Integritas (ZI) Menuju Wilayah Bebas Korupsi (WBK) dan Wilayah Birokrasi Bersih dan Melayani (WBBM) Tahun 2021 hari Senin (20/12). BPS Kabupaten Pinrang menjadi salah satu dari 17 satker BPS yang meraih predikat WBK. Adapun 1 satker lain (.....\",\n                \"rl_date\": \"2021-12-20\"\n            },\n            {\n                \"news_id\": 43,\n                \"newscat_id\": \"Statistik Lain\",\n                \"newscat_name\": \"KEGIATAN STATISTIK LAINNYA\",\n                \"title\": \"BPS Pinrang Ikuti Desk Evaluasi Kemenpan RB\",\n                \"news\": \"Watang Sawitto -- Sebagai calon satuan kerja berpredikat bebas dari korupsi, BPS Kabupaten Pinrang mengikuti Desk Evaluasi yang dilaksanakan oleh Kementerian PAN RB pada Jumat (19/11). Didampingi oleh Tim Penilai Internal (TP) BPS RI, BPS Pinrang menyampaikan paparannya mengenai pembangunan zona integritas menuju Wilayah Bebas dari Korupsi (WBK).<br>H. Muhammad Asri Lantong, SE, selaku kepala BPS P.....\",\n                \"rl_date\": \"2021-11-19\"\n            },\n            {\n                \"news_id\": 42,\n                \"newscat_id\": \"Statistik Lain\",\n                \"newscat_name\": \"KEGIATAN STATISTIK LAINNYA\",\n                \"title\": \"Kepala BPS Pinrang menjadi Narasumber Bimtek DPMPTSP\",\n                \"news\": \"Watang Sawitto -- Selama 2 hari berturut-turut, Rabu dan Kamis (17 dan 18/11), Kepala BPS Kabupaten Pinrang, H. Muhammad Asri Lantong, menjadi salah satu narasumber pada acara Bimbingan Teknis (Bimtek) Penyelenggaraan Perizinan Berusaha melalui Online Single Submission (OSS). Bimtek ini diselenggarakan oleh Dinas Penananaman Modal dan Pelayanan Terpadu Satu Pintu (DPMPTSP) Kabupaten Pinrang.<br>Ber.....\",\n                \"rl_date\": \"2021-11-18\"\n            }\n        ]\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "detail-news",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/view?model=news&lang=ind&id=50&domain={{DOMAIN_VALUE}}",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"view"
+									],
+									"query": [
+										{
+											"key": "model",
+											"value": "news",
+											"description": "WAJIB (Kode Model)"
+										},
+										{
+											"key": "lang",
+											"value": "ind",
+											"description": "WAJIB (Kode bahas: ind, eng)"
+										},
+										{
+											"key": "id",
+											"value": "50",
+											"description": "WAJIB (Kode ID Berita)"
+										},
+										{
+											"key": "domain",
+											"value": "{{DOMAIN_VALUE}}",
+											"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/view?model=news&lang=ind&id=50&domain={{DOMAIN_VALUE}}",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"view"
+											],
+											"query": [
+												{
+													"key": "model",
+													"value": "news",
+													"description": "WAJIB (Kode Model)"
+												},
+												{
+													"key": "lang",
+													"value": "ind",
+													"description": "WAJIB (Kode bahas: ind, eng)"
+												},
+												{
+													"key": "id",
+													"value": "50",
+													"description": "WAJIB (Kode ID Berita)"
+												},
+												{
+													"key": "domain",
+													"value": "{{DOMAIN_VALUE}}",
+													"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 22 Jun 2022 09:47:59 GMT"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60, max=55"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"OK\",\n    \"data-availability\": \"available\",\n    \"data\": {\n        \"news_id\": 50,\n        \"news_type\": \"Statistik Lain\",\n        \"title\": \"Analisis Indikator Sosial Ekonomi Kabupaten Pinrang pada Musrenbang Kabupaten Pinrang 2022\",\n        \"news\": \"&lt;span style=&quot;color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);&quot;&gt;Watang Sawitto -- Dalam rangka evaluasi dan perencanaan pembangunan, Pemerintah Kabupaten Pinrang dalam hal ini Bappelitbangda Kabupaten Pinrang pada hari ini (24/3) melaksanakan Musyawarah Perencanaan Pembangunan (Musrenbang) Rencana Kerja Pemerintah Daerah (RKPD) Kabupaten Pinrang tahun 2023. Kegiatan ini bertempat di Ruang Pola Kantor Bupati Pinrang. Kegiatan tahunan ini dihadiri oleh asisten 1 bagian pemerintah Provinsi Sulawesi Selatan, wakil bupati Kabupaten Pinrang, dan seluruh kepala/ketua OPD serta delegasi tiap kecamatan se-Kabupaten Pinrang. Turut hadir pula beberapa LSM di Kabupaten Pinrang pada Musrenbang hari ini.&lt;/span&gt;&lt;br style=&quot;color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);&quot;&gt;&lt;br style=&quot;color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);&quot;&gt;&lt;span style=&quot;color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);&quot;&gt;H. Muhammad Asri Lantong, SE, selaku Kepala BPS Kabupaten Pinrang turut hadir pula pada acara Musrenbang hari ini, untuk memaparkan kajian mengenai &#039;Analisis Indikator Sosial Ekonomi Kabupaten Pinrang Tahun 2021&#039;. H. Asri menyampaikkan indikator makro strategis Kabupaten Pinrang tahun 2021 seperti kependudukan, pendidikan, perekonomian, Indeks Pembangunan Manusia (IPM), kemiskinan dan ketenagakerjaan di Kabupaten Pinrang.&lt;/span&gt;&lt;br style=&quot;color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);&quot;&gt;&lt;br style=&quot;color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);&quot;&gt;&lt;span style=&quot;color: rgb(38, 38, 38); font-family: -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, Roboto, Helvetica, Arial, sans-serif; font-size: 14px; background-color: rgb(255, 255, 255);&quot;&gt;&quot;Untuk data lebih lengkapnya, silahkan akses publikasi kami, Pinrang dalam Angka tahun 2022 yang tersedia pada website BPS Kabupaten Pinrang yaitu pinrangkab.bps.go.id&quot;, tutup H. Asri.&lt;/span&gt;\",\n        \"rl_date\": \"2022-03-24\",\n        \"picture\": \"https://pinrangkab.bps.go.id/backend/galeri/Analisis-Indikator-Sosial-Ekonomi-Kabupaten-Pinrang-pada-Musrenbang-Kabupaten-Pinrang-2022.jpeg\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "press-release",
+					"item": [
+						{
+							"name": "press-release",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/list?model=pressrelease&domain={{DOMAIN_VALUE}}&keyword",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"list"
+									],
+									"query": [
+										{
+											"key": "model",
+											"value": "pressrelease",
+											"description": "WAJIB (Kode Model)"
+										},
+										{
+											"key": "lang",
+											"value": "",
+											"description": "opsional (ind, eng)",
+											"disabled": true
+										},
+										{
+											"key": "domain",
+											"value": "{{DOMAIN_VALUE}}",
+											"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"description": "opsional (Halaman)",
+											"disabled": true
+										},
+										{
+											"key": "month",
+											"value": "2",
+											"description": "opsional (Kode Bulan)",
+											"disabled": true
+										},
+										{
+											"key": "year",
+											"value": "2022",
+											"description": "opsional (4 digit tahun)",
+											"disabled": true
+										},
+										{
+											"key": "keyword",
+											"value": "",
+											"description": "opsional (Kata Kunci)"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/list?model=pressrelease&domain={{DOMAIN_VALUE}}&keyword",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"list"
+											],
+											"query": [
+												{
+													"key": "model",
+													"value": "pressrelease",
+													"description": "WAJIB (Kode Model)"
+												},
+												{
+													"key": "lang",
+													"value": "",
+													"description": "opsional (ind, eng)",
+													"disabled": true
+												},
+												{
+													"key": "domain",
+													"value": "{{DOMAIN_VALUE}}",
+													"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+												},
+												{
+													"key": "page",
+													"value": "1",
+													"description": "opsional (Halaman)",
+													"disabled": true
+												},
+												{
+													"key": "month",
+													"value": "2",
+													"description": "opsional (Kode Bulan)",
+													"disabled": true
+												},
+												{
+													"key": "year",
+													"value": "2022",
+													"description": "opsional (4 digit tahun)",
+													"disabled": true
+												},
+												{
+													"key": "keyword",
+													"value": null
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 22 Jun 2022 09:47:37 GMT"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60, max=57"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"OK\",\n    \"data-availability\": \"available\",\n    \"data\": [\n        {\n            \"page\": 1,\n            \"pages\": 3,\n            \"per_page\": 10,\n            \"count\": 10,\n            \"total\": 23\n        },\n        [\n            {\n                \"brs_id\": 26,\n                \"subj_id\": 52,\n                \"subj\": \"Produk Domestik Regional Bruto\",\n                \"title\": \"Pertumbuhan Ekonomi Kabupaten Pinrang 2021\",\n                \"rl_date\": \"2022-03-04\",\n                \"updt_date\": null,\n                \"pdf\": \"https://pinrangkab.bps.go.id/pressrelease/downloadapi.html?data=MgoH6AvrV7SdqS09rB202QbpCKRyUi1WSX95BYAmG8FnvF3qTDc4ySMx2TUxIMUTwgnEzyrUEqeUKU5LKwbFLg%3D%3D&tokenuser=\",\n                \"size\": \"1.47 MB\"\n            },\n            {\n                \"brs_id\": 25,\n                \"subj_id\": 6,\n                \"subj\": \"Tenaga Kerja\",\n                \"title\": \"Keadaan Ketenagakerjaan Kabupaten Pinrang Agustus 2021\",\n                \"rl_date\": \"2021-12-29\",\n                \"updt_date\": \"2021-12-30\",\n                \"pdf\": \"https://pinrangkab.bps.go.id/pressrelease/downloadapi.html?data=2gavAZFgmvNxDsA8AlKHlqfPYpDZk%2BW72oBLiLn4b3HwKJbLxyIGn8H2Yy2sNnDHiaDJ39J5TUrdFBnDGZY05Q%3D%3D&tokenuser=\",\n                \"size\": \"1.51 MB\"\n            },\n            {\n                \"brs_id\": 24,\n                \"subj_id\": 26,\n                \"subj\": \"Indeks Pembangunan Manusia\",\n                \"title\": \"Indeks Pembangunan Manusia (IPM) Kabupaten Pinrang Tahun 2021\",\n                \"rl_date\": \"2021-12-29\",\n                \"updt_date\": null,\n                \"pdf\": \"https://pinrangkab.bps.go.id/pressrelease/downloadapi.html?data=yqYdNHMTLYkHQDJSoogkZeRv%2BIREK9U9Q9wezcaoypU606EVeUGE9O%2BQN7KR0xym%2FaVHDGCFgZ8UrTbd%2B%2FMCIA%3D%3D&tokenuser=\",\n                \"size\": \"1.65 MB\"\n            },\n            {\n                \"brs_id\": 23,\n                \"subj_id\": 23,\n                \"subj\": \"Kemiskinan\",\n                \"title\": \"Profil Kemiskinan Kabupaten Pinrang Maret 2021\",\n                \"rl_date\": \"2021-12-29\",\n                \"updt_date\": \"2022-01-11\",\n                \"pdf\": \"https://pinrangkab.bps.go.id/pressrelease/downloadapi.html?data=ylNIZXdBtHavVNu64c34pSz0Ly3YikHv%2FvnD5QIHGX23pPGbCHpE43vCWKwixdoJ4Tg4IdVjmOvGzDqFMmCtyw%3D%3D&tokenuser=\",\n                \"size\": \"2.82 MB\"\n            },\n            {\n                \"brs_id\": 21,\n                \"subj_id\": 52,\n                \"subj\": \"Produk Domestik Regional Bruto\",\n                \"title\": \"Pertumbuhan Ekonomi Kabupaten Pinrang Tahun 2020\",\n                \"rl_date\": \"2021-02-26\",\n                \"updt_date\": null,\n                \"pdf\": \"https://pinrangkab.bps.go.id/pressrelease/downloadapi.html?data=ndu09xEO2duZxq0Pvm3cbK87fU1UnLNdv%2FecgIiudJvb31hji6p2WHhvlfxNPDAMU5PFX9o8y6943c4l%2FP9IgA%3D%3D&tokenuser=\",\n                \"size\": \"0.28 MB\"\n            },\n            {\n                \"brs_id\": 20,\n                \"subj_id\": 32,\n                \"subj\": \"Sensus Penduduk\",\n                \"title\": \"Hasil Sensus Penduduk 2020 Kabupaten Pinrang\",\n                \"rl_date\": \"2021-02-26\",\n                \"updt_date\": null,\n                \"pdf\": \"https://pinrangkab.bps.go.id/pressrelease/downloadapi.html?data=EbvKpPB2W4v9GdWGaYCqrixcW1%2BAG4HtncYPE5YjbQHMoBe9OJsLXwdd%2BeWNXMdrMCzyOW32YCx09Z3k5iWS6A%3D%3D&tokenuser=\",\n                \"size\": \"1.12 MB\"\n            },\n            {\n                \"brs_id\": 19,\n                \"subj_id\": 6,\n                \"subj\": \"Tenaga Kerja\",\n                \"title\": \"Keadaan Ketenagakerjaan Kabupaten Pinrang 2020\",\n                \"rl_date\": \"2021-01-15\",\n                \"updt_date\": null,\n                \"pdf\": \"https://pinrangkab.bps.go.id/pressrelease/downloadapi.html?data=wgqiFGvFX3O0UZjXttApp5ZSxlefyRop7lL3jAJGt7KK46T2GLS8vy8kL6BlNND8%2Fui2%2B4xfSgN2ZXr2D3%2BDHg%3D%3D&tokenuser=\",\n                \"size\": \"0.73 MB\"\n            },\n            {\n                \"brs_id\": 18,\n                \"subj_id\": 26,\n                \"subj\": \"Indeks Pembangunan Manusia\",\n                \"title\": \"Indeks Pembangunan Manusia Kabupaten Pinrang 2020\",\n                \"rl_date\": \"2021-01-15\",\n                \"updt_date\": null,\n                \"pdf\": \"https://pinrangkab.bps.go.id/pressrelease/downloadapi.html?data=vFqaFUjeSqPs00dh1C2LTgn4u3wO%2B2J9ZAkSFBQNcEmhXL5t1rXdTTQjAdsC9AHfzX0Jih9aVMUyzJIwcgF87g%3D%3D&tokenuser=\",\n                \"size\": \"0.64 MB\"\n            },\n            {\n                \"brs_id\": 17,\n                \"subj_id\": 23,\n                \"subj\": \"Kemiskinan\",\n                \"title\": \"Profil Kemiskinan Kabupaten Pinrang 2020\",\n                \"rl_date\": \"2021-01-15\",\n                \"updt_date\": null,\n                \"pdf\": \"https://pinrangkab.bps.go.id/pressrelease/downloadapi.html?data=C%2F2uvDqkGSY4U8XEnXQsxKfZQ5ojKxC4Au85iOBt8Jdv9NF%2BJc2uePhmmxRGAZtfGegwscUQFE0EGvZJ1RII5Q%3D%3D&tokenuser=\",\n                \"size\": \"0.41 MB\"\n            },\n            {\n                \"brs_id\": 9,\n                \"subj_id\": 3,\n                \"subj\": \"Inflasi\",\n                \"title\": \"Perkembangan Indeks Harga Konsumen/Inflasi Gabungan 5 Kota di Sulawesi Selatan Mei 2020\",\n                \"rl_date\": \"2020-06-02\",\n                \"updt_date\": \"2020-06-03\",\n                \"pdf\": \"https://pinrangkab.bps.go.id/pressrelease/downloadapi.html?data=ytK6BRVgav4Yi7RzneAsOz6eDSJigq2XdlCE9zfHXMcY82U7892E9tMnBDrvf%2Bz4VV%2FVVW7cRMci7kJT0Bj%2Bsw%3D%3D&tokenuser=\",\n                \"size\": \"1.28 MB\"\n            }\n        ]\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "detail-release",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/view?model=pressrelease&lang=ind&domain={{DOMAIN_VALUE}}&id=26",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"view"
+									],
+									"query": [
+										{
+											"key": "model",
+											"value": "pressrelease",
+											"description": "WAJIB (Kode Model)"
+										},
+										{
+											"key": "lang",
+											"value": "ind",
+											"description": "WAJIB (Kode Bahasa : ind, eng)"
+										},
+										{
+											"key": "domain",
+											"value": "{{DOMAIN_VALUE}}",
+											"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+										},
+										{
+											"key": "id",
+											"value": "26",
+											"description": "WAJIB (Kode ID BRS)"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/view?model=pressrelease&lang=ind&domain={{DOMAIN_VALUE}}&id=26",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"view"
+											],
+											"query": [
+												{
+													"key": "model",
+													"value": "pressrelease",
+													"description": "WAJIB (Kode Model)"
+												},
+												{
+													"key": "lang",
+													"value": "ind",
+													"description": "WAJIB (Kode Bahasa : ind, eng)"
+												},
+												{
+													"key": "domain",
+													"value": "{{DOMAIN_VALUE}}",
+													"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+												},
+												{
+													"key": "id",
+													"value": "26",
+													"description": "WAJIB (Kode ID BRS)"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 22 Jun 2022 09:47:47 GMT"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60, max=56"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"OK\",\n    \"data-availability\": \"available\",\n    \"data\": {\n        \"brs_id\": 26,\n        \"title\": \"Pertumbuhan Ekonomi Kabupaten Pinrang 2021\",\n        \"abstract\": \"&lt;font face=&quot;Arial, Verdana&quot;&gt;&lt;span style=&quot;font-size: 13.3333px;&quot;&gt;Perekonomian Kabupaten Pinrang berdasarkan besaran Produk Domestik Regional Bruto (PDRB) atas dasar harga berlaku 2021 mencapai Rp21,76 triliun dan atas dasar harga konstan 2010 mencapai Rp13,47 triliun. Kontribusi terbesar PDRB Kabupaten Pinrang dicapai oleh Lapangan Usaha Pertanian, Kehutanan, dan Perikanan sebesar 45,90 persen dari total PDRB disusul oleh Lapangan Usaha Perdagangan Besar dan Eceran; Reparasi Mobil dan Sepeda Motor sebesar 14,48 persen dari total PDRB. Ekonomi Kabupaten Pinrang Tahun 2021 mengalami pertumbuhan sebesar 5,04 persen. Dari sisi produksi, pertumbuhan tertinggi dicapai oleh Lapangan Usaha Transportasi dan Pergudangan sebesar 9,16 persen.&lt;/span&gt;&lt;/font&gt;\",\n        \"rl_date\": \"2022-03-04\",\n        \"updt_date\": null,\n        \"pdf\": \"https://pinrangkab.bps.go.id/pressrelease/downloadapi.html?data=YVw5LeBDW%2FF1awwK2IYr2jFiZRSAILyborpMmJT8z2eXeIhA2g%2Ft5rz3G89FnpveNuXw358Bg7fSwffzC%2Bh39A%3D%3D&tokenuser=\",\n        \"size\": \"1.47 MB\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "publications",
+					"item": [
+						{
+							"name": "publications",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/list?model=publication&domain={{DOMAIN_VALUE}}",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"list"
+									],
+									"query": [
+										{
+											"key": "model",
+											"value": "publication",
+											"description": "WAJIB (Kode Model)"
+										},
+										{
+											"key": "lang",
+											"value": "",
+											"description": "opsional (ind, eng)",
+											"disabled": true
+										},
+										{
+											"key": "domain",
+											"value": "{{DOMAIN_VALUE}}",
+											"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+										},
+										{
+											"key": "page",
+											"value": "",
+											"description": "opsional (Kode Halaman)",
+											"disabled": true
+										},
+										{
+											"key": "month",
+											"value": "",
+											"description": "opsional (Kode Bulan)",
+											"disabled": true
+										},
+										{
+											"key": "year",
+											"value": "",
+											"description": "opsional (Kode Tahun)",
+											"disabled": true
+										},
+										{
+											"key": "keyword",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/list?model=publication&domain={{DOMAIN_VALUE}}",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"list"
+											],
+											"query": [
+												{
+													"key": "model",
+													"value": "publication",
+													"description": "WAJIB (Kode Model)"
+												},
+												{
+													"key": "lang",
+													"value": "",
+													"description": "opsional (ind, eng)",
+													"disabled": true
+												},
+												{
+													"key": "domain",
+													"value": "{{DOMAIN_VALUE}}",
+													"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+												},
+												{
+													"key": "page",
+													"value": "",
+													"description": "opsional (Kode Halaman)",
+													"disabled": true
+												},
+												{
+													"key": "month",
+													"value": "",
+													"description": "opsional (Kode Bulan)",
+													"disabled": true
+												},
+												{
+													"key": "year",
+													"value": "",
+													"description": "opsional (Kode Tahun)",
+													"disabled": true
+												},
+												{
+													"key": "keyword",
+													"value": null,
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 22 Jun 2022 09:46:18 GMT"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60, max=60"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "TS01ac9944=0167a1c86177094fb5894de3b3da9558aecdd350f7b06f38b10b83bd3baa39c0a92bad22d287c6e6a1761647461205b8d76d26955b211af0c2b35eff119ceda979103e9a53; Path=/; Secure; HTTPOnly"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"OK\",\n    \"data-availability\": \"available\",\n    \"data\": [\n        {\n            \"page\": 1,\n            \"pages\": 41,\n            \"per_page\": 10,\n            \"count\": 10,\n            \"total\": 409\n        },\n        [\n            {\n                \"pub_id\": \"a78f4d4f1c3548600cffcd29\",\n                \"title\": \"Statistik Tanaman Hortikultura Kabupaten Pinrang 2022\",\n                \"issn\": \"-\",\n                \"sch_date\": \"2022-06-17\",\n                \"rl_date\": \"2022-06-17\",\n                \"updt_date\": null,\n                \"cover\": \"https://pinrangkab.bps.go.id/publication/getImageCover.html?url=MjAyMi0wNi0yMiMjaHR0cHM6Ly9wb3J0YWxwdWJsaWthc2kuYnBzLmdvLmlkL2FwaS9nZXRLb3Zlci5waHA%2Fc2VsZWN0b3I9YTc4ZjRkNGYxYzM1NDg2MDBjZmZjZDI5\",\n                \"pdf\": \"https://pinrangkab.bps.go.id/publication/downloadapi.html?data=aolpIrkiAaEoXguMw%2BF5IJUmIi711TPGc2p6mBG0YCskHFO8JVvHJSjNJapBox4tmN74TDhx2950kUJf3ar1po1O4pwT0008WyMyK9TT%2Fus%3D&tokenuser=\",\n                \"size\": \"1.61 MB\"\n            },\n            {\n                \"pub_id\": \"a4e00cc35e4ac72fddf89d39\",\n                \"title\": \"Indeks Pembangunan Manusia Kabupaten Pinrang 2022\",\n                \"issn\": \"2797-2798\",\n                \"sch_date\": null,\n                \"rl_date\": \"2022-06-01\",\n                \"updt_date\": null,\n                \"cover\": \"https://pinrangkab.bps.go.id/publication/getImageCover.html?url=MjAyMi0wNi0yMiMjaHR0cHM6Ly9wb3J0YWxwdWJsaWthc2kuYnBzLmdvLmlkL2FwaS9nZXRLb3Zlci5waHA%2Fc2VsZWN0b3I9YTRlMDBjYzM1ZTRhYzcyZmRkZjg5ZDM5\",\n                \"pdf\": \"https://pinrangkab.bps.go.id/publication/downloadapi.html?data=vd6%2FnHLDrrhBdZ3b3Bg8x2rItvinjVU1%2BzsyND%2Fg9dxfFc7dN%2Fr6%2BDlnUGvJRTG542lGItX51G8NkAgTv2K5m9jI0btFa9ZAdfJ%2BclgqM4I%3D&tokenuser=\",\n                \"size\": \"2.89 MB\"\n            },\n            {\n                \"pub_id\": \"fb162254e3fc452b87aa74a9\",\n                \"title\": \"Produk Domestik Regional Bruto Kabupaten Pinrang Menurut Pengeluaran 2017-2021\",\n                \"issn\": \"2776-8112\",\n                \"sch_date\": \"2022-04-28\",\n                \"rl_date\": \"2022-04-28\",\n                \"updt_date\": null,\n                \"cover\": \"https://pinrangkab.bps.go.id/publication/getImageCover.html?url=MjAyMi0wNi0yMiMjaHR0cHM6Ly9wb3J0YWxwdWJsaWthc2kuYnBzLmdvLmlkL2FwaS9nZXRLb3Zlci5waHA%2Fc2VsZWN0b3I9ZmIxNjIyNTRlM2ZjNDUyYjg3YWE3NGE5\",\n                \"pdf\": \"https://pinrangkab.bps.go.id/publication/downloadapi.html?data=RG%2BzewUpEuFv7%2BDMxoHBOgnNSwOgcAJbzL%2BVXXfj6ZO68PIm6%2FfmVyaLxw0rxIOGfB85W0fPLak%2Bdz1lJrX%2Bw3jFMy0wmEJYJE3THkA1bWo%3D&tokenuser=\",\n                \"size\": \"2.17 MB\"\n            },\n            {\n                \"pub_id\": \"b5fa5c3c0cc987eaab4b01f5\",\n                \"title\": \"Produk Domestik Regional Bruto Kabupaten Pinrang Menurut Lapangan Usaha 2017-2021\",\n                \"issn\": \"-\",\n                \"sch_date\": \"2022-04-05\",\n                \"rl_date\": \"2022-04-05\",\n                \"updt_date\": null,\n                \"cover\": \"https://pinrangkab.bps.go.id/publication/getImageCover.html?url=MjAyMi0wNi0yMiMjaHR0cHM6Ly9wb3J0YWxwdWJsaWthc2kuYnBzLmdvLmlkL2FwaS9nZXRLb3Zlci5waHA%2Fc2VsZWN0b3I9YjVmYTVjM2MwY2M5ODdlYWFiNGIwMWY1\",\n                \"pdf\": \"https://pinrangkab.bps.go.id/publication/downloadapi.html?data=zaIxk%2BRS0kfeD5cmzCGI7888ZEZNu1CyLCkTmOJZNI%2BZ3nWyxQyKsd2sfe5WkgxxUO2Pzd6t6mQApHZPZg27nG6EFzzBYf23bwIVKiAnip8%3D&tokenuser=\",\n                \"size\": \"2.92 MB\"\n            },\n            {\n                \"pub_id\": \"8f0bd703335b64a4a20fa1f5\",\n                \"title\": \"Kabupaten Pinrang Dalam Angka 2022\",\n                \"issn\": \"2528-4312\",\n                \"sch_date\": \"2022-02-25\",\n                \"rl_date\": \"2022-02-25\",\n                \"updt_date\": null,\n                \"cover\": \"https://pinrangkab.bps.go.id/publication/getImageCover.html?url=MjAyMi0wNi0yMiMjaHR0cHM6Ly9wb3J0YWxwdWJsaWthc2kuYnBzLmdvLmlkL2FwaS9nZXRLb3Zlci5waHA%2Fc2VsZWN0b3I9OGYwYmQ3MDMzMzViNjRhNGEyMGZhMWY1\",\n                \"pdf\": \"https://pinrangkab.bps.go.id/publication/downloadapi.html?data=%2FlheDhTtWpfoMYQGwJQl8%2BfffEDgwUCDI4Eoq1yQWAJlHbQZpOk4RN8seHw%2BbC5SLZkemjjrLLQE1QZFB4bgp64q5qLR6C2%2B8j6aZq9UgDg%3D&tokenuser=\",\n                \"size\": \"13.78 MB\"\n            },\n            {\n                \"pub_id\": \"5d4a7cbfd1a834ed682ab8ed\",\n                \"title\": \"Pengeluaran Untuk Konsumsi Penduduk Pinrang Berdasarkan Hasil Susenas Maret 2020\",\n                \"issn\": \"-\",\n                \"sch_date\": null,\n                \"rl_date\": \"2021-12-31\",\n                \"updt_date\": null,\n                \"cover\": \"https://pinrangkab.bps.go.id/publication/getImageCover.html?url=MjAyMi0wNi0yMiMjaHR0cHM6Ly9wb3J0YWxwdWJsaWthc2kuYnBzLmdvLmlkL2FwaS9nZXRLb3Zlci5waHA%2Fc2VsZWN0b3I9NWQ0YTdjYmZkMWE4MzRlZDY4MmFiOGVk\",\n                \"pdf\": \"https://pinrangkab.bps.go.id/publication/downloadapi.html?data=ZRDicUI%2FP65a7NoSDct65gOI0QsHDSgGkuY9LElt%2Bn%2FVAdH5PznPR4uVSC9nr3sGAmaaehFFj%2BlgdhyQiRG8MvxEfa5lmhHZeoGj0i8aw3s%3D&tokenuser=\",\n                \"size\": \"6.93 MB\"\n            },\n            {\n                \"pub_id\": \"42bc8cb548c9b9e6ef03cbb2\",\n                \"title\": \"Direktori Hotel dan Akomodasi Lainnya Kabupaten Pinrang Tahun 2021\",\n                \"issn\": \"-\",\n                \"sch_date\": null,\n                \"rl_date\": \"2021-12-31\",\n                \"updt_date\": null,\n                \"cover\": \"https://pinrangkab.bps.go.id/publication/getImageCover.html?url=MjAyMi0wNi0yMiMjaHR0cHM6Ly9wb3J0YWxwdWJsaWthc2kuYnBzLmdvLmlkL2FwaS9nZXRLb3Zlci5waHA%2Fc2VsZWN0b3I9NDJiYzhjYjU0OGM5YjllNmVmMDNjYmIy\",\n                \"pdf\": \"https://pinrangkab.bps.go.id/publication/downloadapi.html?data=LsAxRsHX5rLD91grDyelCM5wmt%2FGjCKY0Cy6IqNOMjgOwxW8qTvFPO029Sluql%2BNTpZBZASK4e5D5I62Xh77STzbmNqaurSh1%2F4ndn%2BtSjg%3D&tokenuser=\",\n                \"size\": \"2.2 MB\"\n            },\n            {\n                \"pub_id\": \"0260a94939a3f592b544ae48\",\n                \"title\": \"Statistik Pendidikan Kabupaten Pinrang 2020\",\n                \"issn\": \"-\",\n                \"sch_date\": null,\n                \"rl_date\": \"2021-12-31\",\n                \"updt_date\": null,\n                \"cover\": \"https://pinrangkab.bps.go.id/publication/getImageCover.html?url=MjAyMi0wNi0yMiMjaHR0cHM6Ly9wb3J0YWxwdWJsaWthc2kuYnBzLmdvLmlkL2FwaS9nZXRLb3Zlci5waHA%2Fc2VsZWN0b3I9MDI2MGE5NDkzOWEzZjU5MmI1NDRhZTQ4\",\n                \"pdf\": \"https://pinrangkab.bps.go.id/publication/downloadapi.html?data=RD9rPNlaWWgYGShovjuNq9%2BvuJEKd4iDTT61uuI%2BdamAvM1aUcQBdOqfUVlyUYu7sZ%2FVKBXSHrE%2FwmRFgTZv%2BoSEpu1ytiQoookbHoCq6V8%3D&tokenuser=\",\n                \"size\": \"0.97 MB\"\n            },\n            {\n                \"pub_id\": \"e4f231a52e20b22248f4cc84\",\n                \"title\": \"Statistik Daerah Kabupaten Pinrang 2021\",\n                \"issn\": \"2797-2976\",\n                \"sch_date\": null,\n                \"rl_date\": \"2021-12-29\",\n                \"updt_date\": null,\n                \"cover\": \"https://pinrangkab.bps.go.id/publication/getImageCover.html?url=MjAyMi0wNi0yMiMjaHR0cHM6Ly9wb3J0YWxwdWJsaWthc2kuYnBzLmdvLmlkL2FwaS9nZXRLb3Zlci5waHA%2Fc2VsZWN0b3I9ZTRmMjMxYTUyZTIwYjIyMjQ4ZjRjYzg0\",\n                \"pdf\": \"https://pinrangkab.bps.go.id/publication/downloadapi.html?data=t6n0DHs02jRxAky%2BPlNmEj64Eka%2BaykFWx5O29P0eAtjOmJmYsGc615n0QrmDdZv3DekaNn9LdoxeZ%2BdwjyZysjZmndKAuR1KLOMgDfhJAY%3D&tokenuser=\",\n                \"size\": \"6.32 MB\"\n            },\n            {\n                \"pub_id\": \"83baff7980bc0fd61cd43aae\",\n                \"title\": \"Statistik Kesejahteraan Rakyat Kabupaten Pinrang 2021\",\n                \"issn\": \"2797-2828\",\n                \"sch_date\": \"2021-12-28\",\n                \"rl_date\": \"2021-12-28\",\n                \"updt_date\": null,\n                \"cover\": \"https://pinrangkab.bps.go.id/publication/getImageCover.html?url=MjAyMi0wNi0yMiMjaHR0cHM6Ly9wb3J0YWxwdWJsaWthc2kuYnBzLmdvLmlkL2FwaS9nZXRLb3Zlci5waHA%2Fc2VsZWN0b3I9ODNiYWZmNzk4MGJjMGZkNjFjZDQzYWFl\",\n                \"pdf\": \"https://pinrangkab.bps.go.id/publication/downloadapi.html?data=3muQzCdRYOl2BZAO63blgu%2F4LkjbeZfEmohc%2Fv%2F%2Bk9sVlWeYV9EWAc76as3XfMbQRxR8sm59ebM8U2TbaaOCimcQwUtwInpHjvoI%2FcGWTA4%3D&tokenuser=\",\n                \"size\": \"27.38 MB\"\n            }\n        ]\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "detail-publication",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/view?model=publication&domain={{DOMAIN_VALUE}}&lang=ind&id=a78f4d4f1c3548600cffcd29",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"view"
+									],
+									"query": [
+										{
+											"key": "model",
+											"value": "publication",
+											"description": "WAJIB (Kode Model)"
+										},
+										{
+											"key": "domain",
+											"value": "{{DOMAIN_VALUE}}",
+											"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+										},
+										{
+											"key": "lang",
+											"value": "ind",
+											"description": "WAJIB (Kode Bahasa : ind, eng)"
+										},
+										{
+											"key": "id",
+											"value": "a78f4d4f1c3548600cffcd29",
+											"description": "WAJIB (Kode ID Publikasi)"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/view?model=publication&domain={{DOMAIN_VALUE}}&lang=ind&id=a78f4d4f1c3548600cffcd29",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"view"
+											],
+											"query": [
+												{
+													"key": "model",
+													"value": "publication",
+													"description": "WAJIB (Kode Model)"
+												},
+												{
+													"key": "domain",
+													"value": "{{DOMAIN_VALUE}}",
+													"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+												},
+												{
+													"key": "lang",
+													"value": "ind",
+													"description": "WAJIB (Kode Bahasa : ind, eng)"
+												},
+												{
+													"key": "id",
+													"value": "a78f4d4f1c3548600cffcd29",
+													"description": "WAJIB (Kode ID Publikasi)"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 22 Jun 2022 09:46:39 GMT"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60, max=59"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"OK\",\n    \"request\": {\n        \"domain\": \"https://pinrangkab.bps.go.id\",\n        \"model\": \"publication\",\n        \"lang\": \"ind\",\n        \"id\": \"a78f4d4f1c3548600cffcd29\",\n        \"time_access\": \"2022-06-22 16:46:38\"\n    },\n    \"data-availability\": \"available\",\n    \"data\": {\n        \"pub_id\": \"a78f4d4f1c3548600cffcd29\",\n        \"title\": \"Statistik Tanaman Hortikultura Kabupaten Pinrang 2022\",\n        \"kat_no\": \"5204003.7315\",\n        \"pub_no\": \"73150.2205\",\n        \"issn\": \"-\",\n        \"abstract\": \"Publikasi Statistik Tanaman Holtikultura Kabupaten Pinrang Tahun 2022 ini menjelaskan semua informasi mengenai hasil pelaksanaan pendataan statistik hortikultura 2021. Pengelolaan data Statistik Pertanian Hortikultura di tingkat Pusat dilakukan secara bersama-sama antara Badan Pusat Statistik (BPS) dengan Direktorat Jendral Hortikultura serta Pusat Data dan Informasi Pertanian, Kementerian Pertanian. Pada tingkat kabupaten dilaksanakan oleh BPS Kabupaten Pinrang dan Dinas Pertanian dan Peternakan Kabupaten Pinrang. Tujuan utama dari kegiatan ini adalah untuk mendapatkan data luas panen, produksi, tanaman rusak, tanaman baru, harga dan produktivitas dari tanaman sayuran, buah-buahan, tanaman hias dan tanaman obat-obatan.<br>\",\n        \"sch_date\": \"2022-06-17\",\n        \"rl_date\": \"2022-06-17\",\n        \"updt_date\": null,\n        \"cover\": \"https://pinrangkab.bps.go.id/publication/getImageCover.html?url=MjAyMi0wNi0yMiMjaHR0cHM6Ly9wb3J0YWxwdWJsaWthc2kuYnBzLmdvLmlkL2FwaS9nZXRLb3Zlci5waHA%2Fc2VsZWN0b3I9YTc4ZjRkNGYxYzM1NDg2MDBjZmZjZDI5\",\n        \"pdf\": \"https://pinrangkab.bps.go.id/publication/downloadapi.html?data=PsBx2qAHXaWRx9nWLHBYGmFEHAz%2FBzFf4TVyErrTO8HX5AfPXPhqiap7mVhv%2B4rV0rz6wFAuDKrNvUgCCRhR%2FXbsC8UPmSYe2Z6i9Yr%2FAio%3D&tokenuser=\",\n        \"size\": \"1.61 MB\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "statistics",
+					"item": [
+						{
+							"name": "statistic-table",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/list?model=statictable&domain={{DOMAIN_VALUE}}",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"list"
+									],
+									"query": [
+										{
+											"key": "model",
+											"value": "statictable",
+											"description": "WAJIB (Kode Model)"
+										},
+										{
+											"key": "lang",
+											"value": "",
+											"description": "opsional (ind, eng)",
+											"disabled": true
+										},
+										{
+											"key": "domain",
+											"value": "{{DOMAIN_VALUE}}"
+										},
+										{
+											"key": "page",
+											"value": "",
+											"description": "opsional (Halaman)",
+											"disabled": true
+										},
+										{
+											"key": "month",
+											"value": "",
+											"description": "opsional (Kode Bulan)",
+											"disabled": true
+										},
+										{
+											"key": "year",
+											"value": "",
+											"description": "opsional (Kode Tahun)",
+											"disabled": true
+										},
+										{
+											"key": "keyword",
+											"value": "",
+											"description": "opsional (Kata Kunci)",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/list?model=statictable&domain={{DOMAIN_VALUE}}",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"list"
+											],
+											"query": [
+												{
+													"key": "model",
+													"value": "statictable",
+													"description": "WAJIB (Kode Model)"
+												},
+												{
+													"key": "lang",
+													"value": "",
+													"description": "opsional (ind, eng)",
+													"disabled": true
+												},
+												{
+													"key": "domain",
+													"value": "{{DOMAIN_VALUE}}"
+												},
+												{
+													"key": "page",
+													"value": "",
+													"description": "opsional (Halaman)",
+													"disabled": true
+												},
+												{
+													"key": "month",
+													"value": "",
+													"description": "opsional (Kode Bulan)",
+													"disabled": true
+												},
+												{
+													"key": "year",
+													"value": "",
+													"description": "opsional (Kode Tahun)",
+													"disabled": true
+												},
+												{
+													"key": "keyword",
+													"value": "",
+													"description": "opsional (Kata Kunci)",
+													"disabled": true
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 22 Jun 2022 09:58:51 GMT"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60, max=60"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "TS01ac9944=0167a1c8615b88f6d464d652ef5218248dfb5e35e1a673517849861224c9f1c9cfe452dc4cdee31e056f0c15a9ce4c48e1f50802053afefc2269c160a8e5a9f0766e124941; Path=/; Secure; HTTPOnly"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"OK\",\n    \"data-availability\": \"available\",\n    \"data\": [\n        {\n            \"page\": 1,\n            \"pages\": 1,\n            \"per_page\": 10,\n            \"count\": 3,\n            \"total\": 3\n        },\n        [\n            {\n                \"table_id\": 16,\n                \"title\": \"Luas Daerah, Persentase Luas Kecamatan Terhadap Luas Kabupaten Dan Letak Ketinggian Daerah Dari Permukaan Laut Dirinci Tiap Kecamatan Di Kabupaten Pinrang Tahun 2019\",\n                \"subj_id\": 153,\n                \"subj\": \"Geografi\",\n                \"updt_date\": \"2020-08-05\",\n                \"size\": \"0.03 MB\",\n                \"excel\": \"https://pinrangkab.bps.go.id/statictable/downloadapi.html?data=E3qyYix776m4eMW9kU21TmpUqZkTS5pcMfiIGzMNrcZtxKqEblgiaH%2Fe5GvZ40PG1HHUALD0R33bTVt6HZqsTQ%3D%3D&tokenuser=\"\n            },\n            {\n                \"table_id\": 23,\n                \"title\": \"Keadaan Tenaga Kesehatan Menurut Jenisnya di Kabupaten Pinrang Tahun 2014\",\n                \"subj_id\": 30,\n                \"subj\": \"Kesehatan\",\n                \"updt_date\": \"2015-09-27\",\n                \"size\": \"0.03 MB\",\n                \"excel\": \"https://pinrangkab.bps.go.id/statictable/downloadapi.html?data=Tbmg%2FlMBGbNWYnDScTvurgpnsGzaCe9JXV8gS%2FnA9oO%2FAAizAFUtwPkOwZVbkZkyV0%2FvNvMqzk3%2Fb8D8pjTLJw%3D%3D&tokenuser=\"\n            },\n            {\n                \"table_id\": 22,\n                \"title\": \"Banyaknya Sarana Kesehatan Menurut Statusnya Kabupaten Pinrang 2014\",\n                \"subj_id\": 30,\n                \"subj\": \"Kesehatan\",\n                \"updt_date\": \"2015-09-27\",\n                \"size\": \"0.03 MB\",\n                \"excel\": \"https://pinrangkab.bps.go.id/statictable/downloadapi.html?data=rL8g%2FaulSkl4zljNFd8IV1G7J9e5sZS%2BjvYhq5Jw1Af0%2BiFc93zNqZt71PfYNoJXHBQw1QN6m5Jal3YwLn8ddQ%3D%3D&tokenuser=\"\n            }\n        ]\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "detail-table",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/view?model=statictable&lang=ind&domain={{DOMAIN_VALUE}}&id=16",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"view"
+									],
+									"query": [
+										{
+											"key": "model",
+											"value": "statictable",
+											"description": "WAJIB (Kode Model)"
+										},
+										{
+											"key": "lang",
+											"value": "ind",
+											"description": "WAJIB (Kode Bahasa : ind, eng)"
+										},
+										{
+											"key": "domain",
+											"value": "{{DOMAIN_VALUE}}",
+											"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+										},
+										{
+											"key": "id",
+											"value": "16",
+											"description": "WAJIB (Kode ID Tabel Statistik)"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "detail-table",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{BASE_URL}}/view?model=statictable&lang=ind&domain={{DOMAIN_VALUE}}&id=16",
+											"host": [
+												"{{BASE_URL}}"
+											],
+											"path": [
+												"view"
+											],
+											"query": [
+												{
+													"key": "model",
+													"value": "statictable",
+													"description": "WAJIB (Kode Model)"
+												},
+												{
+													"key": "lang",
+													"value": "ind",
+													"description": "WAJIB (Kode Bahasa : ind, eng)"
+												},
+												{
+													"key": "domain",
+													"value": "{{DOMAIN_VALUE}}",
+													"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+												},
+												{
+													"key": "id",
+													"value": "16",
+													"description": "WAJIB (Kode ID Tabel Statistik)"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 22 Jun 2022 10:02:13 GMT"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60, max=60"
+										},
+										{
+											"key": "Connection",
+											"value": "Keep-Alive"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": \"OK\",\n    \"data-availability\": \"available\",\n    \"data\": {\n        \"table_id\": 16,\n        \"sub_id\": 153,\n        \"title\": \"Luas Daerah, Persentase Luas Kecamatan Terhadap Luas Kabupaten Dan Letak Ketinggian Daerah Dari Permukaan Laut Dirinci Tiap Kecamatan Di Kabupaten Pinrang Tahun 2019\",\n        \"table\": \"&lt;table class=&quot;excel&quot; cellpadding=0 cellspacing=0 width=742 style=&quot;border-collapse:\\r\\n collapse;table-layout:fixed;width:585pt&quot;&gt;&lt;tbody&gt;\\r\\n\\r\\n\\t&lt;tr style=&quot;height:20px;&quot;&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;font-size:11px;color:#000000;font-weight:bold;&quot;&gt;&lt;nobr&gt;Luas Daerah, Persentase Luas Kecamatan Terhadap Luas Kabupaten Dan Letak Ketinggian Daerah Dari Permukaan Laut Dirinci Tiap Kecamatan Di Kabupaten Pinrang Tahun 2013&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;&quot;&gt;&lt;nobr&gt;&amp;nbsp;&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;&quot;&gt;&lt;nobr&gt;&amp;nbsp;&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;&quot;&gt;&lt;nobr&gt;&amp;nbsp;&lt;/nobr&gt;&lt;/td&gt;&lt;/tr&gt;\\r\\n\\r\\n\\t&lt;tr style=&quot;height:21px;&quot;&gt;\\r\\n\\t\\t&lt;td style=&quot;&quot;&gt;&lt;nobr&gt;&amp;nbsp;&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;&quot;&gt;&lt;nobr&gt;&amp;nbsp;&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;&quot;&gt;&lt;nobr&gt;&amp;nbsp;&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;&quot;&gt;&lt;nobr&gt;&amp;nbsp;&lt;/nobr&gt;&lt;/td&gt;&lt;/tr&gt;\\r\\n\\r\\n\\t&lt;tr style=&quot;height:34px;&quot;&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Calibri;text-align:center;font-size:11px;background-color:#33CCCC;color:#FFFFFF;border-left:2px solid;border-right:2px solid;border-top:2px solid;border-left-color:#000000;border-right-color:#000000;border-top-color:#000000;&quot; rowspan=2&gt;&lt;nobr&gt;KECAMATAN/&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Calibri;text-align:center;font-size:11px;background-color:#33CCCC;color:#FFFFFF;border-left:2px solid;border-top:2px solid;border-left-color:#000000;border-top-color:#000000;&quot; colspan=2&gt;&lt;nobr&gt;LUAS DAERAH/&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Calibri;text-align:center;font-size:11px;background-color:#33CCCC;color:#FFFFFF;border-left:2px solid;border-right:2px solid;border-top:2px solid;border-left-color:#000000;border-right-color:#000000;border-top-color:#000000;&quot; rowspan=2&gt;&lt;nobr&gt;KETINGGIAN DARI PERMUKAAN LAUT/&lt;/nobr&gt;&lt;/td&gt;&lt;/tr&gt;\\r\\n\\r\\n\\t&lt;tr style=&quot;height:21px;&quot;&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Calibri;text-align:center;font-size:11px;background-color:#33CCCC;color:#FFFFFF;font-style:italic;border-left:2px solid;border-bottom:2px solid;border-left-color:#000000;border-bottom-color:#000000;&quot; colspan=2&gt;&lt;nobr&gt;Wide Area&lt;/nobr&gt;&lt;/td&gt;&lt;/tr&gt;\\r\\n\\r\\n\\t&lt;tr style=&quot;height:20px;&quot;&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Calibri;text-align:center;font-size:11px;background-color:#33CCCC;color:#FFFFFF;font-style:italic;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot; rowspan=2&gt;&lt;nobr&gt;Sub-District&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Calibri;text-align:center;font-size:11px;background-color:#33CCCC;color:#FFFFFF;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;LUAS/&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Calibri;text-align:center;font-size:11px;background-color:#33CCCC;color:#FFFFFF;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;PERSENTASE/&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Calibri;text-align:center;font-size:11px;background-color:#33CCCC;color:#FFFFFF;font-style:italic;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot; rowspan=2&gt;&lt;nobr&gt;weight of the sea (m dpl)&lt;/nobr&gt;&lt;/td&gt;&lt;/tr&gt;\\r\\n\\r\\n\\t&lt;tr style=&quot;height:21px;&quot;&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Calibri;text-align:center;font-size:11px;background-color:#33CCCC;color:#FFFFFF;font-style:italic;border-left:2px solid;border-right:2px solid;border-bottom:2px solid;border-left-color:#000000;border-right-color:#000000;border-bottom-color:#000000;&quot;&gt;&lt;nobr&gt;Wide (Km2)&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Calibri;text-align:center;font-size:11px;background-color:#33CCCC;color:#FFFFFF;font-style:italic;border-left:2px solid;border-right:2px solid;border-bottom:2px solid;border-left-color:#000000;border-right-color:#000000;border-bottom-color:#000000;&quot;&gt;&lt;nobr&gt;Percentage&lt;/nobr&gt;&lt;/td&gt;&lt;/tr&gt;\\r\\n\\r\\n\\t&lt;tr style=&quot;height:21px;&quot;&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Calibri;text-align:center;font-size:11px;background-color:#33CCCC;color:#FFFFFF;border:2px solid;border-left-color:#000000;border-right-color:#000000;border-top-color:#000000;border-bottom-color:#000000;&quot;&gt;&lt;nobr&gt;(1)&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Calibri;text-align:center;font-size:11px;background-color:#33CCCC;color:#FFFFFF;border-left:2px solid;border-right:2px solid;border-bottom:2px solid;border-left-color:#000000;border-right-color:#000000;border-bottom-color:#000000;&quot;&gt;&lt;nobr&gt;(2)&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Calibri;text-align:center;font-size:11px;background-color:#33CCCC;color:#FFFFFF;border-left:2px solid;border-right:2px solid;border-bottom:2px solid;border-left-color:#000000;border-right-color:#000000;border-bottom-color:#000000;&quot;&gt;&lt;nobr&gt;(3)&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Calibri;text-align:center;font-size:11px;background-color:#33CCCC;color:#FFFFFF;border:2px solid;border-left-color:#000000;border-right-color:#000000;border-top-color:#000000;border-bottom-color:#000000;&quot;&gt;&lt;nobr&gt;(4)&lt;/nobr&gt;&lt;/td&gt;&lt;/tr&gt;\\r\\n\\r\\n\\t&lt;tr style=&quot;height:20px;&quot;&gt;\\r\\n\\t\\t&lt;td style=&quot;border-left:2px solid;border-right:2px solid;border-top:2px solid;border-left-color:#000000;border-right-color:#000000;border-top-color:#000000;&quot;&gt;&lt;nobr&gt;Suppa&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;74.2&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;3.78&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;2 - 265&lt;/nobr&gt;&lt;/td&gt;&lt;/tr&gt;\\r\\n\\r\\n\\t&lt;tr style=&quot;height:26px;&quot;&gt;\\r\\n\\t\\t&lt;td style=&quot;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;Mattiro Sompe&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;96.99&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;4.94&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;2 - 12&lt;/nobr&gt;&lt;/td&gt;&lt;/tr&gt;\\r\\n\\r\\n\\t&lt;tr style=&quot;height:20px;&quot;&gt;\\r\\n\\t\\t&lt;td style=&quot;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;Lanrisang&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;73.01&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;3.72&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;2 - 14&lt;/nobr&gt;&lt;/td&gt;&lt;/tr&gt;\\r\\n\\r\\n\\t&lt;tr style=&quot;height:20px;&quot;&gt;\\r\\n\\t\\t&lt;td style=&quot;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;Mattiro Bulu&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;132.49&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;6.75&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;12 - 228&lt;/nobr&gt;&lt;/td&gt;&lt;/tr&gt;\\r\\n\\r\\n\\t&lt;tr style=&quot;height:18px;&quot;&gt;\\r\\n\\t\\t&lt;td style=&quot;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;Watang Sawitto&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;58.97&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;3.01&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;6 - 14&lt;/nobr&gt;&lt;/td&gt;&lt;/tr&gt;\\r\\n\\r\\n\\t&lt;tr style=&quot;height:20px;&quot;&gt;\\r\\n\\t\\t&lt;td style=&quot;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;Paleteang&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;37.29&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;1.9&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;14 - 157&lt;/nobr&gt;&lt;/td&gt;&lt;/tr&gt;\\r\\n\\r\\n\\t&lt;tr style=&quot;height:20px;&quot;&gt;\\r\\n\\t\\t&lt;td style=&quot;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;Tiroang&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;77.73&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;3.96&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;13 - 23&lt;/nobr&gt;&lt;/td&gt;&lt;/tr&gt;\\r\\n\\r\\n\\t&lt;tr style=&quot;height:20px;&quot;&gt;\\r\\n\\t\\t&lt;td style=&quot;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;Patampanua&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;136.85&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;6.98&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;13 - 86&lt;/nobr&gt;&lt;/td&gt;&lt;/tr&gt;\\r\\n\\r\\n\\t&lt;tr style=&quot;height:20px;&quot;&gt;\\r\\n\\t\\t&lt;td style=&quot;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;Cempa&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;90.3&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;4.6&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;2 - 18&lt;/nobr&gt;&lt;/td&gt;&lt;/tr&gt;\\r\\n\\r\\n\\t&lt;tr style=&quot;height:20px;&quot;&gt;\\r\\n\\t\\t&lt;td style=&quot;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;Duampanua&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;291.86&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;14.88&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;2 - 965&lt;/nobr&gt;&lt;/td&gt;&lt;/tr&gt;\\r\\n\\r\\n\\t&lt;tr style=&quot;height:20px;&quot;&gt;\\r\\n\\t\\t&lt;td style=&quot;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;Batulappa&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;158.99&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;8.1&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-left-color:#000000;border-right-color:#000000;&quot;&gt;&lt;nobr&gt;20 - 1007&lt;/nobr&gt;&lt;/td&gt;&lt;/tr&gt;\\r\\n\\r\\n\\t&lt;tr style=&quot;height:21px;&quot;&gt;\\r\\n\\t\\t&lt;td style=&quot;border-left:2px solid;border-right:2px solid;border-bottom:2px solid;border-left-color:#000000;border-right-color:#000000;border-bottom-color:#000000;&quot;&gt;&lt;nobr&gt;Lembang &lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-bottom:2px solid;border-left-color:#000000;border-right-color:#000000;border-bottom-color:#000000;&quot;&gt;&lt;nobr&gt;733.09&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-bottom:2px solid;border-left-color:#000000;border-right-color:#000000;border-bottom-color:#000000;&quot;&gt;&lt;nobr&gt;37.37&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-bottom:2px solid;border-left-color:#000000;border-right-color:#000000;border-bottom-color:#000000;&quot;&gt;&lt;nobr&gt;2 - 1908&lt;/nobr&gt;&lt;/td&gt;&lt;/tr&gt;\\r\\n\\r\\n\\t&lt;tr style=&quot;height:21px;&quot;&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-bottom:2px solid;border-left-color:#000000;border-right-color:#000000;border-bottom-color:#000000;&quot;&gt;&lt;nobr&gt;J U M L A H/ T o t a l&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-bottom:2px solid;border-left-color:#000000;border-right-color:#000000;border-bottom-color:#000000;&quot;&gt;&lt;nobr&gt;1961.77&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-bottom:2px solid;border-left-color:#000000;border-right-color:#000000;border-bottom-color:#000000;&quot;&gt;&lt;nobr&gt;100&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;text-align:center;font-size:10px;color:#000000;border-left:2px solid;border-right:2px solid;border-bottom:2px solid;border-left-color:#000000;border-right-color:#000000;border-bottom-color:#000000;&quot;&gt;&lt;nobr&gt;XXX&lt;/nobr&gt;&lt;/td&gt;&lt;/tr&gt;\\r\\n\\r\\n\\t&lt;tr style=&quot;height:0px;&quot;&gt;\\r\\n\\t\\t&lt;td style=&quot;&quot;&gt;&lt;nobr&gt;&amp;nbsp;&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;&quot;&gt;&lt;nobr&gt;&amp;nbsp;&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;&quot;&gt;&lt;nobr&gt;&amp;nbsp;&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;&quot;&gt;&lt;nobr&gt;&amp;nbsp;&lt;/nobr&gt;&lt;/td&gt;&lt;/tr&gt;\\r\\n\\r\\n\\t&lt;tr style=&quot;height:20px;&quot;&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;font-size:10px;color:#000000;&quot;&gt;&lt;nobr&gt;Sumber&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;font-size:10px;color:#000000;&quot; colspan=3&gt;&lt;nobr&gt;: Badan Pertanahan Nasional Kabupaten Pinrang &lt;/nobr&gt;&lt;/td&gt;&lt;/tr&gt;\\r\\n\\r\\n\\t&lt;tr style=&quot;height:20px;&quot;&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;font-size:10px;color:#000000;font-style:italic;&quot;&gt;&lt;nobr&gt;Source&lt;/nobr&gt;&lt;/td&gt;\\r\\n\\t\\t&lt;td style=&quot;font-family:Times New Roman;font-size:10px;color:#000000;font-style:italic;&quot; colspan=3&gt;&lt;nobr&gt;: Office of National Land Board of Pinrang Regency&lt;/nobr&gt;&lt;/td&gt;&lt;/tr&gt;\\r\\n&lt;/tbody&gt;&lt;/table&gt;                            \\r\\n                            \\r\\n                            \\r\\n                            \\r\\n                            \\r\\n                            \\r\\n                            \\r\\n                            \\r\\n                            \\r\\n                            \\r\\n                            \\r\\n                            \",\n        \"cr_date\": \"2015-04-24\",\n        \"updt_date\": \"2020-08-05\",\n        \"excel\": \"https://pinrangkab.bps.go.id/statictable/downloadapi.html?data=24rE%2BCyiE%2FpG4KDftPHoWA4g69pwxX02Y2nqcvw6uEznYw4VkVSvg8A5vIj2NtnkXkdcLWv8CTMwmKJZ6OnjUQ%3D%3D&tokenuser=\",\n        \"size\": \"0.03 MB\"\n    }\n}"
+								}
+							]
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "domain",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/domain?type=kabbyprov&prov=73",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"domain"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "kabbyprov",
+							"description": "all,prov,kab,kabbyprov"
+						},
+						{
+							"key": "prov",
+							"value": "73",
+							"description": "opsional"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/domain?type=kabbyprov&prov=73",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"domain"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "kabbyprov",
+									"description": "all,prov,kab,kabbyprov"
+								},
+								{
+									"key": "prov",
+									"value": "73",
+									"description": "opsional"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jun 2022 09:47:19 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60, max=58"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"OK\",\n    \"data-availability\": \"available\",\n    \"data\": [\n        {\n            \"page\": 1,\n            \"pages\": 1,\n            \"total\": 24\n        },\n        [\n            {\n                \"domain_id\": \"7301\",\n                \"domain_name\": \"Kepulauan Selayar\",\n                \"domain_url\": \"https://selayarkab.bps.go.id\"\n            },\n            {\n                \"domain_id\": \"7302\",\n                \"domain_name\": \"Bulukumba\",\n                \"domain_url\": \"https://bulukumbakab.bps.go.id\"\n            },\n            {\n                \"domain_id\": \"7303\",\n                \"domain_name\": \"Bantaeng\",\n                \"domain_url\": \"https://bantaengkab.bps.go.id\"\n            },\n            {\n                \"domain_id\": \"7304\",\n                \"domain_name\": \"Jeneponto\",\n                \"domain_url\": \"https://jenepontokab.bps.go.id\"\n            },\n            {\n                \"domain_id\": \"7305\",\n                \"domain_name\": \"Takalar\",\n                \"domain_url\": \"https://takalarkab.bps.go.id\"\n            },\n            {\n                \"domain_id\": \"7306\",\n                \"domain_name\": \"Gowa\",\n                \"domain_url\": \"https://gowakab.bps.go.id\"\n            },\n            {\n                \"domain_id\": \"7307\",\n                \"domain_name\": \"Sinjai\",\n                \"domain_url\": \"https://sinjaikab.bps.go.id\"\n            },\n            {\n                \"domain_id\": \"7308\",\n                \"domain_name\": \"Maros\",\n                \"domain_url\": \"https://maroskab.bps.go.id\"\n            },\n            {\n                \"domain_id\": \"7309\",\n                \"domain_name\": \"Pangkajene Dan Kepulauan\",\n                \"domain_url\": \"https://pangkepkab.bps.go.id\"\n            },\n            {\n                \"domain_id\": \"7310\",\n                \"domain_name\": \"Barru\",\n                \"domain_url\": \"https://barrukab.bps.go.id\"\n            },\n            {\n                \"domain_id\": \"7311\",\n                \"domain_name\": \"Bone\",\n                \"domain_url\": \"https://bonekab.bps.go.id\"\n            },\n            {\n                \"domain_id\": \"7312\",\n                \"domain_name\": \"Soppeng\",\n                \"domain_url\": \"https://soppengkab.bps.go.id\"\n            },\n            {\n                \"domain_id\": \"7313\",\n                \"domain_name\": \"Wajo\",\n                \"domain_url\": \"https://wajokab.bps.go.id\"\n            },\n            {\n                \"domain_id\": \"7314\",\n                \"domain_name\": \"Sidenreng Rappang\",\n                \"domain_url\": \"https://sidrapkab.bps.go.id\"\n            },\n            {\n                \"domain_id\": \"7315\",\n                \"domain_name\": \"Pinrang\",\n                \"domain_url\": \"https://pinrangkab.bps.go.id\"\n            },\n            {\n                \"domain_id\": \"7316\",\n                \"domain_name\": \"Enrekang\",\n                \"domain_url\": \"https://enrekangkab.bps.go.id\"\n            },\n            {\n                \"domain_id\": \"7317\",\n                \"domain_name\": \"Luwu\",\n                \"domain_url\": \"https://luwukab.bps.go.id\"\n            },\n            {\n                \"domain_id\": \"7318\",\n                \"domain_name\": \"Tana Toraja\",\n                \"domain_url\": \"https://tatorkab.bps.go.id\"\n            },\n            {\n                \"domain_id\": \"7322\",\n                \"domain_name\": \"Luwu Utara\",\n                \"domain_url\": \"https://luwuutarakab.bps.go.id\"\n            },\n            {\n                \"domain_id\": \"7325\",\n                \"domain_name\": \"Luwu Timur\",\n                \"domain_url\": \"https://luwutimurkab.bps.go.id\"\n            },\n            {\n                \"domain_id\": \"7326\",\n                \"domain_name\": \"Toraja Utara\",\n                \"domain_url\": \"https://torutkab.bps.go.id\"\n            },\n            {\n                \"domain_id\": \"7371\",\n                \"domain_name\": \"Makassar\",\n                \"domain_url\": \"https://makassarkota.bps.go.id\"\n            },\n            {\n                \"domain_id\": \"7372\",\n                \"domain_name\": \"Parepare\",\n                \"domain_url\": \"https://pareparekota.bps.go.id\"\n            },\n            {\n                \"domain_id\": \"7373\",\n                \"domain_name\": \"Palopo\",\n                \"domain_url\": \"https://palopokota.bps.go.id\"\n            }\n        ]\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "infographics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/list?model=infographic&domain={{DOMAIN_VALUE}}",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"list"
+					],
+					"query": [
+						{
+							"key": "model",
+							"value": "infographic",
+							"description": "WAJIB (Kode Model)"
+						},
+						{
+							"key": "lang",
+							"value": "ind",
+							"description": "opsional (ind, eng)",
+							"disabled": true
+						},
+						{
+							"key": "domain",
+							"value": "{{DOMAIN_VALUE}}",
+							"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+						},
+						{
+							"key": "page",
+							"value": "",
+							"description": "opsional (Kode Halaman)",
+							"disabled": true
+						},
+						{
+							"key": "keyword",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/list?model=infographic&domain={{DOMAIN_VALUE}}",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"list"
+							],
+							"query": [
+								{
+									"key": "model",
+									"value": "infographic",
+									"description": "WAJIB (Kode Model)"
+								},
+								{
+									"key": "lang",
+									"value": "ind",
+									"description": "opsional (ind, eng)",
+									"disabled": true
+								},
+								{
+									"key": "domain",
+									"value": "{{DOMAIN_VALUE}}",
+									"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+								},
+								{
+									"key": "page",
+									"value": "",
+									"description": "opsional (Kode Halaman)",
+									"disabled": true
+								},
+								{
+									"key": "keyword",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jun 2022 10:05:25 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60, max=60"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"OK\",\n    \"data-availability\": \"available\",\n    \"data\": [\n        {\n            \"page\": 1,\n            \"pages\": 6,\n            \"per_page\": 10,\n            \"count\": 10,\n            \"total\": 52\n        },\n        [\n            {\n                \"inf_id\": 74,\n                \"title\": \"Pertumbuhan Ekonomi 2021\",\n                \"img\": \"https://pinrangkab.bps.go.id/backend/images/Pertumbuhan-Ekonomi-2021-ind.png\",\n                \"desc\": \"\",\n                \"category\": 2,\n                \"dl\": \"https://pinrangkab.bps.go.id/galery/download.html?asdf=NzQ%3D&qwer=ldjfdifsdjkfahi&zxcv=MjAyMi0wNi0yMiAxNzowNToyNQ%3D%3D\"\n            },\n            {\n                \"inf_id\": 73,\n                \"title\": \"Penutup SKD 2021\",\n                \"img\": \"https://pinrangkab.bps.go.id/backend/images/Penutup-SKD-2021-ind.jpeg\",\n                \"desc\": \"\",\n                \"category\": 0,\n                \"dl\": \"https://pinrangkab.bps.go.id/galery/download.html?asdf=NzM%3D&qwer=ldjfdifsdjkfahi&zxcv=MjAyMi0wNi0yMiAxNzowNToyNQ%3D%3D\"\n            },\n            {\n                \"inf_id\": 72,\n                \"title\": \"Analisis Kepuasan Kualitas Data SKD 2021\",\n                \"img\": \"https://pinrangkab.bps.go.id/backend/images/Analisis-Kepuasan-Kualitas-Data-SKD-2021-ind.jpeg\",\n                \"desc\": \"\",\n                \"category\": 0,\n                \"dl\": \"https://pinrangkab.bps.go.id/galery/download.html?asdf=NzI%3D&qwer=ldjfdifsdjkfahi&zxcv=MjAyMi0wNi0yMiAxNzowNToyNQ%3D%3D\"\n            },\n            {\n                \"inf_id\": 71,\n                \"title\": \"Analisis Kebutuhan Data SKD 2021\",\n                \"img\": \"https://pinrangkab.bps.go.id/backend/images/Analisis-Kebutuhan-Data-SKD-2021-ind.jpeg\",\n                \"desc\": \"\",\n                \"category\": 0,\n                \"dl\": \"https://pinrangkab.bps.go.id/galery/download.html?asdf=NzE%3D&qwer=ldjfdifsdjkfahi&zxcv=MjAyMi0wNi0yMiAxNzowNToyNQ%3D%3D\"\n            },\n            {\n                \"inf_id\": 70,\n                \"title\": \"Analisis Perilaku Anti Korupsi SKD 2021\",\n                \"img\": \"https://pinrangkab.bps.go.id/backend/images/Analisis-Perilaku-Anti-Korupsi-SKD-2021-ind.jpeg\",\n                \"desc\": \"\",\n                \"category\": 0,\n                \"dl\": \"https://pinrangkab.bps.go.id/galery/download.html?asdf=NzA%3D&qwer=ldjfdifsdjkfahi&zxcv=MjAyMi0wNi0yMiAxNzowNToyNQ%3D%3D\"\n            },\n            {\n                \"inf_id\": 69,\n                \"title\": \"Analisis Kepuasan Layanan SKD 2021\",\n                \"img\": \"https://pinrangkab.bps.go.id/backend/images/Analisis-Kepuasan-Layanan-SKD-2021-ind.jpeg\",\n                \"desc\": \"\",\n                \"category\": 0,\n                \"dl\": \"https://pinrangkab.bps.go.id/galery/download.html?asdf=Njk%3D&qwer=ldjfdifsdjkfahi&zxcv=MjAyMi0wNi0yMiAxNzowNToyNQ%3D%3D\"\n            },\n            {\n                \"inf_id\": 68,\n                \"title\": \"Segmentasi Konsumen SKD 2021\",\n                \"img\": \"https://pinrangkab.bps.go.id/backend/images/Segmentasi-Konsumen-SKD-2021-ind.jpeg\",\n                \"desc\": \"\",\n                \"category\": 0,\n                \"dl\": \"https://pinrangkab.bps.go.id/galery/download.html?asdf=Njg%3D&qwer=ldjfdifsdjkfahi&zxcv=MjAyMi0wNi0yMiAxNzowNToyNQ%3D%3D\"\n            },\n            {\n                \"inf_id\": 67,\n                \"title\": \"Pendahuluan SKD 2021\",\n                \"img\": \"https://pinrangkab.bps.go.id/backend/images/Pendahuluan-SKD-2021-ind.jpeg\",\n                \"desc\": \"\",\n                \"category\": 0,\n                \"dl\": \"https://pinrangkab.bps.go.id/galery/download.html?asdf=Njc%3D&qwer=ldjfdifsdjkfahi&zxcv=MjAyMi0wNi0yMiAxNzowNToyNQ%3D%3D\"\n            },\n            {\n                \"inf_id\": 66,\n                \"title\": \"Ketenagakerjaan Agustus 2021\",\n                \"img\": \"https://pinrangkab.bps.go.id/backend/images/Ketenagakerjaan-Agustus-2021-ind.png\",\n                \"desc\": \"\",\n                \"category\": 1,\n                \"dl\": \"https://pinrangkab.bps.go.id/galery/download.html?asdf=NjY%3D&qwer=ldjfdifsdjkfahi&zxcv=MjAyMi0wNi0yMiAxNzowNToyNQ%3D%3D\"\n            },\n            {\n                \"inf_id\": 65,\n                \"title\": \"Kemiskinan Maret 2021\",\n                \"img\": \"https://pinrangkab.bps.go.id/backend/images/Kemiskinan-Maret-2021-ind.png\",\n                \"desc\": \"\",\n                \"category\": 1,\n                \"dl\": \"https://pinrangkab.bps.go.id/galery/download.html?asdf=NjU%3D&qwer=ldjfdifsdjkfahi&zxcv=MjAyMi0wNi0yMiAxNzowNToyNQ%3D%3D\"\n            }\n        ]\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "strategic-indicator",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/list?model=indicators&domain=7300&var=91",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"list"
+					],
+					"query": [
+						{
+							"key": "model",
+							"value": "indicators",
+							"description": "WAJIB (Kode Model)"
+						},
+						{
+							"key": "lang",
+							"value": "ind",
+							"description": "opsional (ind, eng)",
+							"disabled": true
+						},
+						{
+							"key": "domain",
+							"value": "7300",
+							"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+						},
+						{
+							"key": "var",
+							"value": "91",
+							"description": "opsional (Kode ID Variabel)"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/list?model=indicators&domain=7300&var=91",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"list"
+							],
+							"query": [
+								{
+									"key": "model",
+									"value": "indicators",
+									"description": "WAJIB (Kode Model)"
+								},
+								{
+									"key": "lang",
+									"value": "ind",
+									"description": "opsional (ind, eng)",
+									"disabled": true
+								},
+								{
+									"key": "domain",
+									"value": "7300",
+									"description": "WAJIB (Kode Kabupaten atau Kode Provinsi + 00)"
+								},
+								{
+									"key": "var",
+									"value": "91",
+									"description": "opsional (Kode ID Variabel)"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jun 2022 10:07:54 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60, max=54"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"OK\",\n    \"data-availability\": \"available\",\n    \"data\": [\n        {\n            \"page\": 1,\n            \"pages\": 2,\n            \"per_page\": 10,\n            \"count\": 10,\n            \"total\": 12\n        },\n        [\n            {\n                \"indicator_id\": 1,\n                \"title\": \"Jumlah Penduduk Provinsi Sulawesi Selatan, 2020\",\n                \"name\": \"Jumlah Penduduk Provinsi Sulawesi Selatan, 2020\",\n                \"data_source\": \"Proyeksi Penduduk, 2010-2020\",\n                \"value\": \"8888762\",\n                \"unit\": \"Jiwa\"\n            },\n            {\n                \"indicator_id\": 16,\n                \"title\": \"Nilai Ekspor Sulawesi Selatan, Oktober 2020\",\n                \"name\": \"\",\n                \"data_source\": \"Badan Pusat Statistik Provinsi Sulawesi Selatan\",\n                \"value\": \"119.14\",\n                \"unit\": \"Juta US$\"\n            },\n            {\n                \"indicator_id\": 8,\n                \"title\": \"Nilai Impor Sulawesi Selatan, Oktober 2020\",\n                \"name\": \"Nilai Impor Sulawesi Selatan, Oktober 2020\",\n                \"data_source\": \"BPS Provinsi Sulawesi Selatan\",\n                \"value\": \"62.78\",\n                \"unit\": \"Juta US$\"\n            },\n            {\n                \"indicator_id\": 15,\n                \"title\": \"Inflasi Sulawesi Selatan, November 2020\",\n                \"name\": \"\",\n                \"data_source\": \"Badan Pusat Statistik Provinsi Sulawesi Selatan\",\n                \"value\": \"0.15\",\n                \"unit\": \"Tidak Ada Satuan\"\n            },\n            {\n                \"indicator_id\": 5,\n                \"title\": \"Gini Ratio Provinsi Sulawesi Selatan, Sept 2019\",\n                \"name\": \"Gini Ratio Provinsi Sulawesi Selatan, 2019\",\n                \"data_source\": \"BPS Provinsi Sulawesi Selatan\",\n                \"value\": \"0.39\",\n                \"unit\": \"Tidak Ada Satuan\"\n            },\n            {\n                \"indicator_id\": 9,\n                \"title\": \"Neraca Perdagangan Sulawesi Selatan, Oktober 2020\",\n                \"name\": \"Neraca Perdagangan Sulawesi Selatan, Oktober 2020\",\n                \"data_source\": \"BPS Provinsi Sulawesi Selatan\",\n                \"value\": \"56.36\",\n                \"unit\": \"Juta US$\"\n            },\n            {\n                \"indicator_id\": 6,\n                \"title\": \"Indeks Pembangunan Manusia Provinsi Sulsel, 2020\",\n                \"name\": \"Indeks Pembangunan Manusia Provinsi Sulawesi Selatan, 2020\",\n                \"data_source\": \"BPS Provinsi Sulawesi Selatan\",\n                \"value\": \"71.93\",\n                \"unit\": \"Tidak Ada Satuan\"\n            },\n            {\n                \"indicator_id\": 12,\n                \"title\": \"TPT Provinsi Sulawesi Selatan, 2018\",\n                \"name\": \"TPT Provinsi Sulawesi Selatan, 2018\",\n                \"data_source\": \"BPS Provinsi Sulawesi Selatan\",\n                \"value\": \"5.34\",\n                \"unit\": \"Tidak Ada Satuan\"\n            },\n            {\n                \"indicator_id\": 17,\n                \"title\": \"Angka Harapan Hidup (AHH), 2020\",\n                \"name\": \"\",\n                \"data_source\": \"BPS\",\n                \"value\": \"70.57\",\n                \"unit\": \"Tahun\"\n            },\n            {\n                \"indicator_id\": 18,\n                \"title\": \"Harapan Lama Sekolah (HLS), 2020\",\n                \"name\": \"\",\n                \"data_source\": \"BPS\",\n                \"value\": \"13.45\",\n                \"unit\": \"Tahun\"\n            }\n        ]\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "foreign-trade",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/dataexim?sumber=2&periode=1&kodehs=01&jenishs=1&tahun=2022",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"dataexim"
+					],
+					"query": [
+						{
+							"key": "sumber",
+							"value": "2",
+							"description": "WAJIB ( 1. Ekspor, 2.Impor)"
+						},
+						{
+							"key": "periode",
+							"value": "1",
+							"description": "WAJIB (1. Bulanan, 2.Tahunan)"
+						},
+						{
+							"key": "kodehs",
+							"value": "01",
+							"description": "WAJIB (Kode HS, jika lebih dari satu pisah dengan \";\" )"
+						},
+						{
+							"key": "jenishs",
+							"value": "1",
+							"description": "WAJIB (1. Dua Digit, 2. Full)"
+						},
+						{
+							"key": "tahun",
+							"value": "2022",
+							"description": "WAJIB (Tahun Data)"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/dataexim?sumber=2&periode=1&kodehs=01&jenishs=1&tahun=2022",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"dataexim"
+							],
+							"query": [
+								{
+									"key": "sumber",
+									"value": "2",
+									"description": "WAJIB ( 1. Ekspor, 2.Impor)"
+								},
+								{
+									"key": "periode",
+									"value": "1",
+									"description": "WAJIB (1. Bulanan, 2.Tahunan)"
+								},
+								{
+									"key": "kodehs",
+									"value": "01",
+									"description": "WAJIB (Kode HS, jika lebih dari satu pisah dengan \";\" )"
+								},
+								{
+									"key": "jenishs",
+									"value": "1",
+									"description": "WAJIB (1. Dua Digit, 2. Full)"
+								},
+								{
+									"key": "tahun",
+									"value": "2022",
+									"description": "WAJIB (Tahun Data)"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jun 2022 10:14:07 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60, max=55"
+						},
+						{
+							"key": "Connection",
+							"value": "Keep-Alive"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"OK\",\n    \"data-availability\": \"available\",\n    \"metadata\": {\n        \"source\": \"Sumber : https://www.bps.go.id diakses pada 22-06-2022 17:10:11 WIB\",\n        \"value\": \"Nilai Ekspor/Impor dalam US Dollar ($)\",\n        \"netweight\": \"Berat Ekspor/Impor dalam Kilogram (KG)\",\n        \"kodehs\": \"Kode dan Deskripsi dari HS\",\n        \"pod\": \"Pelabuhan Masuk/Keluar di Indonesia\",\n        \"ctr\": \"Negara Asal/Tujuan\",\n        \"tahun\": \"Tahun Data\"\n    },\n    \"data\": [\n        {\n            \"value\": 8380240,\n            \"netweight\": 2027771,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"BELAWAN\",\n            \"ctr\": \"AUSTRALIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 6061571,\n            \"netweight\": 1405330,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"BELAWAN\",\n            \"ctr\": \"AUSTRALIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 595185,\n            \"netweight\": 199447,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"BELAWAN\",\n            \"ctr\": \"AUSTRALIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 21291389,\n            \"netweight\": 5155530,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"PANJANG\",\n            \"ctr\": \"AUSTRALIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 16011273,\n            \"netweight\": 3953765,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"PANJANG\",\n            \"ctr\": \"AUSTRALIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 6608857,\n            \"netweight\": 1846441,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"PANJANG\",\n            \"ctr\": \"AUSTRALIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 1414392,\n            \"netweight\": 374941,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"PANJANG\",\n            \"ctr\": \"AUSTRALIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 198769,\n            \"netweight\": 9635,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"AUSTRALIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 22802,\n            \"netweight\": 1888,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"AUSTRALIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 994896,\n            \"netweight\": 92114,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"AUSTRALIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 15755,\n            \"netweight\": 117,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"AUSTRALIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 33836813,\n            \"netweight\": 8449047,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"TANJUNG PRIOK\",\n            \"ctr\": \"AUSTRALIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 26684051,\n            \"netweight\": 6183913,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"TANJUNG PRIOK\",\n            \"ctr\": \"AUSTRALIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 21086482,\n            \"netweight\": 5023764,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"TANJUNG PRIOK\",\n            \"ctr\": \"AUSTRALIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 9605983,\n            \"netweight\": 2471275,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"TANJUNG PRIOK\",\n            \"ctr\": \"AUSTRALIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 383729,\n            \"netweight\": 56993,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"AUSTRIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 0,\n            \"netweight\": 0,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"BELGIUM\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 400,\n            \"netweight\": 10,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"BELGIUM\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 600,\n            \"netweight\": 45,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"BRAZIL\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 500,\n            \"netweight\": 45,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"BRAZIL\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 400,\n            \"netweight\": 6,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"BULGARIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 1200,\n            \"netweight\": 19,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"BULGARIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 0,\n            \"netweight\": 0,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"BULGARIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 1730,\n            \"netweight\": 60,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"BULGARIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 8000,\n            \"netweight\": 350,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"CHINA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 10800,\n            \"netweight\": 1000,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"CHINA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 7500,\n            \"netweight\": 340,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"CHINA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 10800,\n            \"netweight\": 1000,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"CHINA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 7784,\n            \"netweight\": 313,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"CZECH REPUBLIC\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 16785,\n            \"netweight\": 164,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"CZECH REPUBLIC\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 1600,\n            \"netweight\": 28,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"CZECH REPUBLIC\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 7015,\n            \"netweight\": 313,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"CZECH REPUBLIC\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 2500,\n            \"netweight\": 43,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"EGYPT\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 20800,\n            \"netweight\": 1466,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"EGYPT\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 10000,\n            \"netweight\": 1700,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"EGYPT\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 11200,\n            \"netweight\": 2091,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"EGYPT\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 57114,\n            \"netweight\": 367,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"FRANCE\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 488542,\n            \"netweight\": 226,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"FRANCE\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 1350,\n            \"netweight\": 24,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"FRANCE\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 4085,\n            \"netweight\": 140,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"GERMANY, FED. REP. OF\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 2486,\n            \"netweight\": 148,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"GERMANY, FED. REP. OF\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 1854,\n            \"netweight\": 99,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"GERMANY, FED. REP. OF\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 2550,\n            \"netweight\": 158,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"GERMANY, FED. REP. OF\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 3485,\n            \"netweight\": 48,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"GUYANA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 2740,\n            \"netweight\": 20,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"GUYANA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 0,\n            \"netweight\": 0,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"GUYANA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 662,\n            \"netweight\": 4,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"HUNGARY\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 1750,\n            \"netweight\": 51,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"HUNGARY\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 550,\n            \"netweight\": 18,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"IRELAND\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 0,\n            \"netweight\": 0,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"IRELAND\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 1700,\n            \"netweight\": 100,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"ITALY\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 0,\n            \"netweight\": 0,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"ITALY\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 13552,\n            \"netweight\": 8,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"JAPAN\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 71261,\n            \"netweight\": 177,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"JAPAN\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 63680,\n            \"netweight\": 34,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"JAPAN\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 55140,\n            \"netweight\": 28,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"JAPAN\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 3000,\n            \"netweight\": 25,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"KENYA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 0,\n            \"netweight\": 0,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"KENYA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 2400,\n            \"netweight\": 37,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"KENYA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 2577,\n            \"netweight\": 40,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"KOREA, REPUBLIC OF\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 3172,\n            \"netweight\": 153,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"KOREA, REPUBLIC OF\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 4181,\n            \"netweight\": 80,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"KOREA, REPUBLIC OF\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 5278,\n            \"netweight\": 67,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"KOREA, REPUBLIC OF\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 550,\n            \"netweight\": 15,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"LITHUANIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 6250,\n            \"netweight\": 27,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"MADAGASCAR\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 43019,\n            \"netweight\": 1370,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"MALAYSIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 53474,\n            \"netweight\": 1708,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"MALAYSIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 58239,\n            \"netweight\": 1407,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"MALAYSIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 53873,\n            \"netweight\": 1774,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"MALAYSIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 10000,\n            \"netweight\": 60,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"MALI\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 4800,\n            \"netweight\": 59,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"MOLDOVA, REPUBLIC OF\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 129533,\n            \"netweight\": 13013,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"NETHERLANDS\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 89623,\n            \"netweight\": 6531,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"NETHERLANDS\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 147930,\n            \"netweight\": 11130,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"NETHERLANDS\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 220050,\n            \"netweight\": 278,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"NEW ZEALAND\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 0,\n            \"netweight\": 0,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"NICARAGUA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 3525,\n            \"netweight\": 38,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"NICARAGUA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 551,\n            \"netweight\": 20,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"PHILIPPINES\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 1650,\n            \"netweight\": 63,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"PHILIPPINES\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 14550,\n            \"netweight\": 180,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"PHILIPPINES\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 750,\n            \"netweight\": 44,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"PHILIPPINES\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 550,\n            \"netweight\": 11,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"POLAND\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 800,\n            \"netweight\": 41,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"POLAND\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 400,\n            \"netweight\": 7,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"POLAND\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 3600,\n            \"netweight\": 58,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"POLAND\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 800,\n            \"netweight\": 25,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"QATAR\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 0,\n            \"netweight\": 0,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"QATAR\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 260,\n            \"netweight\": 8,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"ROMANIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 36889,\n            \"netweight\": 729,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"RUSSIA FEDERATION\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 40532,\n            \"netweight\": 616,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"RUSSIA FEDERATION\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 29776,\n            \"netweight\": 468,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"RUSSIA FEDERATION\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 550,\n            \"netweight\": 95,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"SERBIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 0,\n            \"netweight\": 0,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"SERBIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 12450,\n            \"netweight\": 53,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"SEYCHELLES\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 0,\n            \"netweight\": 0,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"JUANDA (U)-SURABAYA\",\n            \"ctr\": \"SINGAPORE\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 407,\n            \"netweight\": 60,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"JUANDA (U)-SURABAYA\",\n            \"ctr\": \"SINGAPORE\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 1150,\n            \"netweight\": 78,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"SINGAPORE\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 1500,\n            \"netweight\": 60,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"SINGAPORE\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 1027,\n            \"netweight\": 63,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"SINGAPORE\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 2667,\n            \"netweight\": 58,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"SINGAPORE\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 0,\n            \"netweight\": 0,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"SLOVAKIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 2719,\n            \"netweight\": 30,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"SLOVAKIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 1290,\n            \"netweight\": 301,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"SOUTH AFRICA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 2350,\n            \"netweight\": 141,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"SOUTH AFRICA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 3000,\n            \"netweight\": 120,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"SOUTH AFRICA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 850,\n            \"netweight\": 20,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"SPAIN\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 1150,\n            \"netweight\": 77,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"SPAIN\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 600,\n            \"netweight\": 9,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"SPAIN\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 3650,\n            \"netweight\": 450,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"SURINAME\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 5600,\n            \"netweight\": 125,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"SYRIA ARAB REPUBLIC\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 0,\n            \"netweight\": 0,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"SYRIA ARAB REPUBLIC\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 8000,\n            \"netweight\": 130,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"SYRIA ARAB REPUBLIC\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 23520,\n            \"netweight\": 50,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"THAILAND\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 26800,\n            \"netweight\": 20,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"THAILAND\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 15800,\n            \"netweight\": 12,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"THAILAND\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 24827,\n            \"netweight\": 35,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"THAILAND\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 6000,\n            \"netweight\": 50,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"TOGO\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 13665,\n            \"netweight\": 164,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"TOGO\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 10000,\n            \"netweight\": 208,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"TOGO\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 6800,\n            \"netweight\": 87,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"UKRAINE\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 2800,\n            \"netweight\": 30,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"UKRAINE\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 21155,\n            \"netweight\": 339,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"UKRAINE\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 1150,\n            \"netweight\": 22,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"UNITED ARAB EMIRATES\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 1200,\n            \"netweight\": 53,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"UNITED ARAB EMIRATES\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 800,\n            \"netweight\": 16,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"UNITED ARAB EMIRATES\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 550,\n            \"netweight\": 25,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"UNITED KINGDOM\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 0,\n            \"netweight\": 0,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"UNITED KINGDOM\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 1200,\n            \"netweight\": 11,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"UNITED KINGDOM\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 2923058,\n            \"netweight\": 6263,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"UNITED STATES\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 4221644,\n            \"netweight\": 8848,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"UNITED STATES\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 692009,\n            \"netweight\": 896,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"UNITED STATES\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 8264,\n            \"netweight\": 203,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"UNITED STATES\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 4500,\n            \"netweight\": 70,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"UZBEKISTAN\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 21716,\n            \"netweight\": 444,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"VIET NAM\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 15800,\n            \"netweight\": 214,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"VIET NAM\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[03] Maret\"\n        },\n        {\n            \"value\": 11750,\n            \"netweight\": 175,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"VIET NAM\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 34450,\n            \"netweight\": 715,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"VIET NAM\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        },\n        {\n            \"value\": 5000,\n            \"netweight\": 59,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"ZAMBIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[04] April\"\n        },\n        {\n            \"value\": 0,\n            \"netweight\": 0,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"ZAMBIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[02] Februari\"\n        },\n        {\n            \"value\": 23600,\n            \"netweight\": 367,\n            \"kodehs\": \"[01] Binatang hidup\",\n            \"pod\": \"SOEKARNO-HATTA (U)\",\n            \"ctr\": \"ZAMBIA\",\n            \"tahun\": \"2022\",\n            \"bulan\": \"[01] Januari\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "{{API_KEY}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "key",
+				"type": "string"
+			},
+			{
+				"key": "in",
+				"value": "query",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_KEY",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "BASE_URL",
+			"value": "https://webapi.bps.go.id/v1/api",
+			"type": "string"
+		},
+		{
+			"key": "DOMAIN_VALUE",
+			"value": "7315",
+			"type": "string"
+		}
+	]
+}
